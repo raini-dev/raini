@@ -16,17 +16,17 @@ Workshops can be conducted on various topics, but each workshop MUST fully cover
 
 ### What's a workshop
 
-What we define as a workshop is as follows:
+We define workshop as follows:
 
-> Workshop is a relatively small single- or multistep educational program designed to teach a small group of people theory and practice on a specific topic, including techniques or ideas, which they can then use in their work or or daily lives.
+> Workshop is a relatively small single- or multistep educational program designed to teach a small group of people theory and practice on a specific topic, including techniques or ideas, which they can then use in their work or daily lives.
 
 This definition imposes the following constraints:
 
-1. The educational program MUST be covered in no longer than 3 days (no longer than 8 hours per day, no exceptions. These hours include breaks)
+1. The educational program MUST be short and covered in no longer than 3 days (no longer than 8 hours per day, no exceptions. These hours include breaks)
 
 2. The educational program MUST cover theory and practice for one specific topic. Intersections with related topics CAN take place, and the requirement holds for the main topic only.
 
-3. The workshop MUST be held for a group of 10 to 25 people so that the expense of organizing it makes sense AND everyone has the chance to be heard and paid some personal attention.
+3. The workshop MUST be held for a small group (10 to 25 people) so that the expense of organizing it makes sense AND everyone has the chance to be heard and paid some personal attention.
 
 4. Information given in the workshop MUST be applicable in real-life scenarios.
 
@@ -36,8 +36,8 @@ This definition imposes the following constraints:
 
 2. We empower people regardless of their prior experience. If a workshop requires prior knowledge, it MUST refer to a workshop conducted earlier that covers that topic. _Go from the bottom up._
 
-3. We provide hands-on education. Each workshop provides theoretical foundation AND practical experience of applying it beyond "Hello, World!". _Teach a man to fish._
+3. We provide hands-on education. Each workshop provides theoretical foundation AND practical experience of applying it beyond "Hello, World!". _In theory, theory and practice are the same. In practice, they are not._
 
-4. We follow open/closed principle. We are happy to let everyone join and organize workshops anywhere and we work hard on making the process of creating those workshops clear and easy to follow for everyone. Our workshops are carefully curated and we only require one thing - you MUST NOT disobey the guidelines as it is a good thing for both you and us. _Be open for extension, but closed for modification._
+4. We follow open/closed principle. We are happy for everybody to join and organize workshops anywhere and we share our experience as we work hard on making the process of creating those workshops clear and easy to follow for everyone. Our workshops are carefully curated and we only require one thing - you MUST follow the guidelines. It is a good thing for both you and us. _Be open for extension, but closed for modification._
 
 [1]: https://tools.ietf.org/html/rfc2119
