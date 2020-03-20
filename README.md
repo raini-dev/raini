@@ -12,7 +12,7 @@
 
 Our mission is to evolve the tech industry through accessible education. We rely on the workshop education form with relatively small education programs.
 
-Workshops can be conducted on various topics, but each workshop MUST fully cover **at least one** block of certification related to that topic.
+We strive for the best, so we heavily rely on widely adopted certifications from various fields and cover subjects that exist in the certification exams. This lets us elicit topics for the most important content to deliver. Workshops can be conducted on various topics, but each workshop MUST fully cover **at least one** block of certification related to that topic.
 
 ### What's a workshop
 
