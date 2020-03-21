@@ -1,4 +1,6 @@
-Fixes #<!--- issue -->
+# Related issue
+
+Fixes #<!--- issue number -->
 
 ## Description
 
@@ -9,7 +11,7 @@ Fixes #<!--- issue -->
 <!--- Why is this change required? What problem does it solve? -->
 <!--- If it fixes an open issue, please link to the issue here. -->
 
-## Screenshots (if appropriate):
+## Screenshots (if appropriate)
 
 ## Types of changes
 
@@ -20,7 +22,7 @@ Fixes #<!--- issue -->
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as it did before)
 
-## Checklist:
+## Checklist
 
 <!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
 <!--- If you're unsure about any of these, don't hesitate to ask. We're here to help! -->
