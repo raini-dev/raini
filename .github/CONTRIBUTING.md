@@ -10,7 +10,13 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 ## Suggesting a topic for a workshop
 
-> TBD
+Before suggesting a topic, please, look through the [issues](issues_link).
+
+There is a chance that someone already proposed the topic and it is being discussed. Then just jump into the discussion and start throwing :thumbsup: at everyone.
+
+Also, the workshop may have already be conducted. In this case, you can find public materials in the issue (if applicable). If you think that all that is too old and ugly, you can call for reopening the issue.
+
+If you are absolutely sure that the topic is brand-new, [create a new issue](create_issue_link) and pick the "Suggest a workshop topic" issue template and describe as many details as you can.
 
 ## Joining the initiative
 
@@ -26,3 +32,6 @@ Please note we have a code of conduct, please follow it in all your interactions
 - Create a pull request to `master` branch of current repository
 - Specify link to the issue you are resolving with this contribution (issue MUST exist and all the discussions in the
   issue MUST be resolved as well)
+
+[create_issue_link]: https://github.com/priestine/not-node-school/issues/new
+[issues_link]: https://github.com/priestine/not-node-school/issues
