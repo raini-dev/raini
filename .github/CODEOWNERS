@@ -1,0 +1,8 @@
+# This file defines code owners of various sections of the repository
+
+# The owners will be the default owners for everything in the corresponding
+# section. When someone opens a pulll request that modifies contents under
+# ownership of mentioned people, they will automatically be assigned as
+# reviewers
+/.github/ @priestine
+/* @priestine @AntonRatnick

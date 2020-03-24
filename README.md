@@ -4,6 +4,8 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![versioning: semantics](https://img.shields.io/badge/versioning-@priestine/semantics-912e5c.svg)](https://github.com/priestine/semantics)
 
+[![issues number](https://img.shields.io/github/issues/priestine/not-node-school?logo=github)](https://github.com/priestine/not-node-school/issues)
+
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](1).
 
 **It is not a node school.**
@@ -40,4 +42,9 @@ This definition imposes the following constraints:
 
 4. We follow open/closed principle. We are happy for everybody to join and organize workshops anywhere and we share our experience as we work hard on making the process of creating those workshops clear and easy to follow for everyone. Our workshops are carefully curated and we only require one thing - you MUST follow the guidelines. It is a good thing for both you and us. _Be open for extension, but closed for modification._
 
+## How to participate
+
+Take a look at our [Contribution Guide](2).
+
 [1]: https://tools.ietf.org/html/rfc2119
+[2]: https://github.com/priestine/not-node-school/blob/master/.github/CONTRIBUTING.md
