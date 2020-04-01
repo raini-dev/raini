@@ -1,6 +1,8 @@
 # not-node-school
 
 ![lint](https://github.com/priestine/not-node-school/workflows/lint/badge.svg)
+![version](https://img.shields.io/github/v/tag/priestine/not-node-school?color=912e5c&label=version&logo=github)
+
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![versioning: semantics](https://img.shields.io/badge/versioning-@priestine/semantics-912e5c.svg)](https://github.com/priestine/semantics)
 
