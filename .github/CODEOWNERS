@@ -4,5 +4,4 @@
 # section. When someone opens a pulll request that modifies contents under
 # ownership of mentioned people, they will automatically be assigned as
 # reviewers
-/.github/ @priestine
-/* @priestine @AntonRatnick
+* @priestine
