@@ -15,4 +15,4 @@ jobs:
     - name: Bump version with Priestine Semantics
       env:
         SEMANTICS_TOKEN: ${{ secrets.SEMANTICS_TOKEN }}
-      run: npx @priestine/semantics --prefix=v  --user=priestine --password=${SEMANTICS_TOKEN} --github-user-name=priestine --guthub-user-email=priestine1.dev@gmail.com
+      run: npx @priestine/semantics --prefix=v  --user=priestine --password=${SEMANTICS_TOKEN} --github-user-name=priestine --guthub-user-email=priestine1.dev@gmail.com --write-to-changelog=false
