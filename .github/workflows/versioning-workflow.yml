@@ -9,9 +9,10 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-        token: ${SEMANTICS_TOKEN}
     - uses: actions/setup-node@v1
       with:
         node-version: '12.x'
     - name: Bump version with Priestine Semantics
+      env:
+        SEMANTICS_TOKEN: ${{ secrets.SEMANTICS_TOKEN }}
       run: npx @priestine/semantics --prefix=v  --user=priestine --password=${SEMANTICS_TOKEN} --github-user-name=priestine --guthub-user-email=priestine1.dev@gmail.com
