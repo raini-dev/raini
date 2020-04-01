@@ -1,0 +1,14 @@
+name: version
+on:
+  push:
+    branches: [ master ]
+jobs:
+  version:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Bump version with Priestine Semantics
+      run: npx @priestine/semantics --prefix=v  --user=priestine --password=${SEMANTICS_TOKEN} --github-user-name=priestine --guthub-user-email=priestine1.dev@gmail.com
