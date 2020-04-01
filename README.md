@@ -3,8 +3,8 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![versioning: semantics](https://img.shields.io/badge/versioning-@priestine/semantics-912e5c.svg)](https://github.com/priestine/semantics)
 
-[![build status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fpriestine%2Fnot-node-school%2Fbadge&style=flat)](https://actions-badge.atrox.dev/priestine/not-node-school)
-[![license: mpl-2.0](https://img.shields.io/github/license/priestine/not-node-school)](https://github.com/priestine/not-node-school/)
+![Actions](https://github.com/priestine/not-node-school/workflows/Actions/badge.svg)
+![license: mpl-2.0](https://img.shields.io/github/license/priestine/not-node-school)
 
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](1).
 
