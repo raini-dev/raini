@@ -12,9 +12,7 @@
 
 ## Introduction
 
-Our mission is to evolve the tech industry through accessible education. We rely on the workshop education form with relatively small education programs.
-
-We strive for the best, so we heavily rely on widely adopted certifications from various fields and cover subjects that exist in the certification exams. This lets us elicit topics for the most important content to deliver. Workshops can be conducted on various topics, but each workshop MUST fully cover **at least one** block of certification related to that topic.
+Our mission is to evolve the tech industry through accessible education. We rely on the workshop education form with relatively small composable educational programs.
 
 ### What's a workshop
 
@@ -34,13 +32,13 @@ This definition imposes the following constraints:
 
 ## Goals
 
-1. We see the certifications as the valid source of truth for evaluating one's knowledge. _Make certifications great again._
+1. We see the certifications as the valid source of truth for evaluating one's knowledge. For each created workshop, covering a block from an existing certification is highly RECOMMENDED. _Make certifications great again._
 
 2. We empower people regardless of their prior experience. If a workshop requires prior knowledge, it MUST refer to a workshop conducted earlier that covers that topic. _Go from the bottom up._
 
 3. We provide hands-on education. Each workshop provides theoretical foundation AND practical experience of applying it beyond "Hello, World!". _In theory, theory and practice are the same. In practice, they are not._
 
-4. We follow open/closed principle. We are happy for everybody to join and organize workshops anywhere and we share our experience as we work hard on making the process of creating those workshops clear and easy to follow for everyone. Our workshops are carefully curated and we only require one thing - you MUST follow the guidelines. It is a good thing for both you and us. _Be open for extension, but closed for modification._
+4. We are happy for everybody to join and organize workshops anywhere and we share our experience as we work hard on making the process of creating those workshops clear and easy to follow for everyone. Our workshops are carefully curated and we only require one thing - you MUST follow the guidelines. It is a good thing for both you and us. _Be open for extension, but closed for modification._
 
 ## How to participate
 
