@@ -8,8 +8,6 @@
 
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](1).
 
-**It is not a node school.**
-
 ## Introduction
 
 Our mission is to evolve the tech industry through accessible education. We rely on the workshop education form with relatively small composable educational programs.
