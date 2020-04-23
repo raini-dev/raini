@@ -6,6 +6,11 @@
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![versioning: semantics](https://img.shields.io/badge/versioning-@priestine/semantics-912e5c.svg)](https://github.com/priestine/semantics)
 
+[![twitter: raini_dev](https://img.shields.io/twitter/follow/raini_dev?color=blue&label=raini_dev&logo=twitter&logoColor=white&style=flat)](https://twitter.com/raini_dev)
+[![slack: raini-dev](https://img.shields.io/badge/slack-raini--dev-7C2852?logo=slack)](https://raini-dev.slack.com)
+
+[![trello: workshop schedule](https://img.shields.io/badge/trello-workshops%20schedule-blue)](https://trello.com/b/a7od8aCi/raini-workshops-schedule)
+
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
 
 ## Introduction
