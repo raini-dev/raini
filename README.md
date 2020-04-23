@@ -10,11 +10,9 @@
 
 [![trello: workshop schedule](https://img.shields.io/badge/trello-workshops%20schedule-blue)](https://trello.com/b/a7od8aCi/raini-workshops-schedule)
 
+Raini.dev is a free open source platform for creating and sharing educational programs related to software development and all the things around it. Our mission is to evolve the tech industry through accessible education. We rely on the workshop education form with relatively small composable educational programs.
+
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
-
-## Introduction
-
-Our mission is to evolve the tech industry through accessible education. We rely on the workshop education form with relatively small composable educational programs.
 
 ### What's a workshop
 
