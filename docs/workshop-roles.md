@@ -6,35 +6,35 @@ The workshop on a specific topic (hereafter, **program**) requires preparation t
 
 Coordinator is the person that is interested in organizing a program. The coordinator can be referred to as the Project Owner of the program. The list of responsibilities of a Coordinator may vary, but the main scope is defined below.
 
-### Responsibilities
+### Coordinator Responsibilities
 
-* follow the guidelines outlined by our Code of Conduct
-* **for non-collaborators of Not Node School**: create a GitHub repository for the program
-* create a GitHub project for the program (hereafter, **board**)
-* assign Team Members - one person can take multiple roles
-* define target audience 
-* define program requirements for Attendees
-* plan the program with the Team Members
-* create a work breakdown structure (WBS) for the program represented as a set of granular decomposed tasks on the board
-* create a `Suggest a workshop topic` issue and maintain it according to the requirements and link the project (with a repository, if applicable) to the issue (TBD: requirements)
-* manage the process of the program preparation and keep the board up-to-date
-* keep the workshop suggestion issue up-to-date with the process of workshop preparation
-* reserve and conduct a dry run (TBD: how to conduct a dry run)
-* **optional** prepare accommodation and technical stack for the workshop (if necessary)
-* provide the date for the program run
+- follow the guidelines outlined by our Code of Conduct
+- **for non-collaborators of Not Node School**: create a GitHub repository for the program
+- create a GitHub project for the program (hereafter, **board**)
+- assign Team Members - one person can take multiple roles
+- define target audience
+- define program requirements for Attendees
+- plan the program with the Team Members
+- create a work breakdown structure (WBS) for the program represented as a set of granular decomposed tasks on the board
+- create a `Suggest a workshop topic` issue and maintain it according to the requirements and link the project (with a repository, if applicable) to the issue (TBD: requirements)
+- manage the process of the program preparation and keep the board up-to-date
+- keep the workshop suggestion issue up-to-date with the process of workshop preparation
+- reserve and conduct a dry run (TBD: how to conduct a dry run)
+- **optional** prepare accommodation and technical stack for the workshop (if necessary)
+- provide the date for the program run
 
 ## Team Member
 
 Team Member is a collaborator that helps the Coordinator with preparing a program. Suggestion of improvements and ideas from Team Members is highly appreciated, both for the program and for Not Node School in general. To propose an improvement, file a `Suggest an improvement` issue.
 
-### Responsibilities
+### Team Member Responsibilities
 
-* follow the guidelines outlined by our Code of Conduct
-* help the Coordinator with planning the program
-* participate in the development of theoretical and/or practical blocks of the program
-* take part in dry runs
-* complete tasks on the board
-* inform the Coordinator and other Team Members about blockers
+- follow the guidelines outlined by our Code of Conduct
+- help the Coordinator with planning the program
+- participate in the development of theoretical and/or practical blocks of the program
+- take part in dry runs
+- complete tasks on the board
+- inform the Coordinator and other Team Members about blockers
 
 ## Instructor
 
@@ -50,7 +50,7 @@ Attendee is a person that studies the program. Attendees can be divided into thr
 
 ### Responsibilities
 
-* meet the requirements defined for the workshop
-* pay the entry fee if it is assigned for attending the workshop
-* follow the guidelines outlined by our Code of Conduct
-* use and share the materials of the program in accordance with Mozilla Public License 2.0
+- meet the requirements defined for the workshop
+- pay the entry fee if it is assigned for attending the workshop
+- follow the guidelines outlined by our Code of Conduct
+- use and share the materials of the program in accordance with Mozilla Public License 2.0
