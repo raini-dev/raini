@@ -7,6 +7,8 @@ labels: bug
 
 ## Describe the bug
 
+- [ ] this is a security issue report
+
 ## Steps To Reproduce
 
 ## Expected behavior
