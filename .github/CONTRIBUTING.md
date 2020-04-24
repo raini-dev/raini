@@ -4,10 +4,6 @@ When contributing to this repository, please first discuss the change you wish t
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
 
-## Initiating a self-managed workshop
-
-> TBD
-
 ## Suggesting a topic for a workshop
 
 Before suggesting a topic, please, look through the [issues](issues_link).
@@ -17,6 +13,10 @@ There is a chance that someone already proposed the topic and it is being discus
 Also, the workshop may have already be conducted. In this case, you can find public materials in the issue (if applicable). If you think that all that is too old and ugly, you can call for reopening the issue.
 
 If you are absolutely sure that the topic is brand-new, [create a new issue](create_issue_link) and pick the "Suggest a workshop topic" issue template and describe as many details as you can.
+
+## Suggesting a workshop
+
+> TBD
 
 ## Joining the initiative
 
