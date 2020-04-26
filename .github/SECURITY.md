@@ -12,6 +12,6 @@ We appreciate your efforts to responsibly disclose your findings, and will make 
 
 ## Reporting a Vulnerability
 
-In order to report vulnerability, create an issue using `BUG` template and check the `this is a security issue report` checkbox.
+In order to report vulnerability, create an issue using the **Bug Report** template and check the `this is a security issue report` checkbox.
 
 Note that the team can use [GitHub Security Advisories](https://help.github.com/en/github/managing-security-vulnerabilities/about-github-security-advisories) to disclose, fix and publish information about the vulnerability you responsibly reported to us.
