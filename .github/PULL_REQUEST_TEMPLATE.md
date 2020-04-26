@@ -1,6 +1,6 @@
 # Related issue
 
-Fixes #<!--- issue number -->
+Closes #<!--- issue number -->
 
 ## Description
 
