@@ -16,7 +16,13 @@ If you are absolutely sure that the topic is brand-new, [create a new issue](cre
 
 ## Suggesting a workshop
 
-> TBD
+This part is applicable if you want to prepare a workshop yourself and suggest it to be part of Raini.
+
+We provide [workshop template](https://github.com/raini-dev/raini-workshop-template) to get up and running quickly. The workshop provides all the boilerplate, including the slides template, links to useful guides and requirements. It also contains a checklist so that you can be sure that you don't miss anything.
+
+When you are ready, we set up a dry run session. You can think of it as a grand reheasal where you conduct the workshop for a selected audience. You are free to invite someone else if you like but don't try to make it a party. After the dry run we provide recommendations on the materials.
+
+After the materials are approved, we fork your repository. Keep in mind that during the workshop you MUST reference the fork, not the original repository. The fork MUST be up to date when the workshop takes place, so we insist on informing us on any amendments after the materials approval.
 
 ## Joining the initiative
 
