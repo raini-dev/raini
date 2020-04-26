@@ -18,13 +18,13 @@ Raini.dev is a free open source platform for creating and sharing educational pr
 
 First, we would like to outline what we mean by "a workshop". We define workshop as follows:
 
-> Workshop is a relatively small single- or multistep educational program designed to teach group of people theory and practice on a specific topic, including techniques or ideas, which they can then use in their work or daily lives.
+> Workshop is a relatively small single- or multistep educational program designed to teach a group of people theory and practice on a specific topic, including techniques or ideas, which they can then use in their work or daily lives.
 
-Unlike mentoring programs, workshops aim at teaching a group of people at once. If a workshop is held offline, the groups are rather small (10-25 people) so that everyone has a chance to be heared and paid attention to. Online workshops accomodate far more people (actually, infinite amount of people) at a price of shortened attendee feedback. But that's what online format always does to us.
+- Unlike _mentoring programs_, workshops aim at teaching a group of people at once. If a workshop is held offline, the groups are rather small (10-25 people) so that everyone has a chance to be heared and paid attention to. Online workshops accomodate far more people (actually, infinite amount of people) at a price of shortened attendee feedback. But that's what online format always does to us.
+- Unlike _courses and trainings_, workshops do not aim at covering everything. Instead, we build small and effective educational programs that can be composed into courses and reused in many places.
+- Unlike _meetups and tech talks_, workshops provide a comfortable time span and environment for covering topics deeper and encourage discussion rather than teaching through listening.
 
-Unlike courses and training in general, workshops do not aim at covering everything. Instead, we build small and effective educational programs that can be composed into courses and reused in many places.
-
-Unlike meetups and tech talks, workshops provide a comfortable time span and environment for covering topics deeper and encourage discussion rather than teaching through listening.
+Thus, we see workshops as an effective (and heavily underestimated) way to create good educational programs.
 
 ## Goals
 
