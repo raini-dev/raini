@@ -8,7 +8,7 @@
 [![twitter: raini_dev](https://img.shields.io/twitter/follow/raini_dev?color=blue&label=raini_dev&logo=twitter&logoColor=white&style=flat)](https://twitter.com/raini_dev)
 [![slack: raini-dev](https://img.shields.io/badge/slack-raini--dev-7C2852?logo=slack)](https://raini-dev.slack.com)
 
-[![trello: workshop schedule](https://img.shields.io/badge/trello-workshops%20schedule-blue)](https://trello.com/b/a7od8aCi/raini-workshops-schedule)
+[![notion: workshop schedule](https://img.shields.io/badge/raini.dev-workshops%20schedule-blue)](https://www.notion.so/raini/7c40f420d87b4e2bbb043b00d3807b09?v=55912bedce61427a8c63ccf0509f7655)
 
 Raini.dev is a free open source platform for creating and sharing educational programs related to software development and all the things around it. Our mission is to evolve the tech industry through accessible education. We rely on the workshop education form with relatively small composable educational programs.
 
