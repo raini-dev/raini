@@ -1,6 +1,11 @@
-# Workshop Difficulty Levels
+---
+title: Course Difficulty
+slug: course-difficulty
+---
 
-There are five possible difficulty levels for workshops:
+There are five difficulty levels we outlined for courses, workshops and other events that occur in Raini.dev. These levels convey very specific logic that is going to be outlined here.
+
+The five possible difficulty levels are:
 
 - n/a
 - novice

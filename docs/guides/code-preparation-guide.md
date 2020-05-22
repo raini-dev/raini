@@ -1,3 +1,0 @@
-# Code Preparation Guide
-
-> TBD

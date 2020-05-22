@@ -1,3 +1,0 @@
-# Theory Preparation Guide
-
-> TBD
