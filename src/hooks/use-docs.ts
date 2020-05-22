@@ -1,7 +1,8 @@
-import { useStaticQuery, graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
+import { AllDocsQuery } from "../../graphql-types";
 
 export const useDocs = () => {
-  const query = useStaticQuery(graphql`
+  const query: AllDocsQuery = useStaticQuery(graphql`
     query AllDocs {
       allMdx(
         filter: { fileAbsolutePath: { regex: "/content/docs/" } }

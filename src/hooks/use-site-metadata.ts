@@ -1,7 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby";
+import { SiteMetadataQuery } from "../../graphql-types";
 
 export const useSiteMetadata = () => {
-  const data = useStaticQuery(graphql`
+  const query: SiteMetadataQuery = useStaticQuery(graphql`
     query SiteMetadata {
       site {
         siteMetadata {
@@ -12,5 +13,5 @@ export const useSiteMetadata = () => {
     }
   `);
 
-  return data.site.siteMetadata;
+  return query?.site?.siteMetadata;
 };

@@ -3,6 +3,7 @@ import React from "react";
 import { BgSection } from "../components/sections";
 import { Layout } from "../components/layout";
 import { HelmetWrapper } from "../components/helmet-wrapper";
+import { LogoImageQuery } from "../../graphql-types";
 
 const PageMeta = () => (
   <HelmetWrapper
@@ -13,8 +14,8 @@ const PageMeta = () => (
 );
 
 const NotFound = () => {
-  const { image } = useStaticQuery(graphql`
-    query {
+  const { image }: LogoImageQuery = useStaticQuery(graphql`
+    query LogoImage {
       image: file(relativePath: { eq: "landing-spot.png" }) {
         sharp: childImageSharp {
           fluid {
@@ -28,7 +29,12 @@ const NotFound = () => {
   return (
     <Layout>
       <PageMeta />
-      <BgSection Tag="section" fluid={image.sharp.fluid} fadeIn="soft" padding="12rem 5rem">
+      <BgSection
+        Tag="section"
+        fluid={image?.sharp?.fluid as undefined}
+        fadeIn="soft"
+        padding="12rem 5rem"
+      >
         <h1>Sorry, the page you are trying to access is not there.</h1>
       </BgSection>
     </Layout>

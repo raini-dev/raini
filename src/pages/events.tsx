@@ -9,7 +9,6 @@ import { Label } from "../components/label";
 import { Layout } from "../components/layout";
 import { useEvents } from "../hooks/use-events";
 import { EventURL, YouTubeThumbnailURL } from "../routes";
-import { IEvent } from "../types/event";
 
 const Image = styled.img`
   width: 100%;
@@ -46,23 +45,26 @@ const Events = () => {
       <PageContainer>
         <h1>Events</h1>
         <Container>
-          {events.map((e: IEvent) => (
-            <Card key={e.frontmatter.slug}>
-              <Link to={EventURL(e.frontmatter.slug)}>
-                <Image src={YouTubeThumbnailURL(e.frontmatter.videoId)} alt={e.frontmatter.title} />
+          {events.map((event, i) => (
+            <Card key={event?.frontmatter?.slug ?? i}>
+              <Link to={EventURL(event?.frontmatter?.slug ?? "")}>
+                <Image
+                  src={YouTubeThumbnailURL(event?.frontmatter?.videoId ?? "")}
+                  alt={event?.frontmatter?.title}
+                />
               </Link>
               <CardContents>
-                <Link to={EventURL(e.frontmatter.slug)}>
-                  <h3>{e.frontmatter.title}</h3>
+                <Link to={EventURL(event?.frontmatter?.slug ?? "")}>
+                  <h3>{event?.frontmatter?.title}</h3>
                 </Link>
 
-                <p>{e.excerpt}</p>
+                <p>{event?.excerpt}</p>
 
                 <EventInfo>
-                  <Link to={EventURL(e.frontmatter.slug)}>
+                  <Link to={EventURL(event?.frontmatter?.slug ?? "")}>
                     <Button>See more &rarr;</Button>
                   </Link>
-                  <Label>{e.frontmatter.language}</Label>
+                  <Label>{event?.frontmatter?.language}</Label>
                 </EventInfo>
               </CardContents>
             </Card>
