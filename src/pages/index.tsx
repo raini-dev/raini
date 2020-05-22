@@ -1,6 +1,6 @@
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 import Image from "gatsby-image";
 import React, { FC } from "react";
@@ -154,8 +154,8 @@ const MissionSection: FC<IMissionSectionProps> = ({ image }) => (
       <MissionTextWrapper>
         <h2>The Mission</h2>
         <Mission>
-          Our mission is to evolve the tech industry through education powered
-          by professionals and accessible to everyone.
+          Our mission is to evolve the tech industry through education powered by professionals and
+          accessible to everyone.
         </Mission>
         <Link to={Route.DOCS}>
           <Button type="button">Join us</Button>
@@ -177,40 +177,36 @@ const FeaturesSection: FC<IFeaturesSectionProps> = ({ bgImage }) => (
         <Card>
           <CardContents>
             <p>
-              We treat education as an <strong>Open Source</strong> project.
-              Together, we are able to improve the quality of the education
-              content based on real knowledge and vivid experience of developers
-              from all over the world.
+              We treat education as an <strong>Open Source</strong> project. Together, we are able
+              to improve the quality of the education content based on real knowledge and vivid
+              experience of developers from all over the world.
             </p>
           </CardContents>
         </Card>
         <Card>
           <CardContents>
             <p>
-              <strong>Contribution</strong> is easy. We&apos;ve prepared several
-              guides on how to bring the material to its best shape. Don&apos;t
-              have time for that? Just land what you have and someone will{" "}
-              <strong>contribute</strong> to it to make it fit.
+              <strong>Contribution</strong> is easy. We&apos;ve prepared several guides on how to
+              bring the material to its best shape. Don&apos;t have time for that? Just land what
+              you have and someone will <strong>contribute</strong> to it to make it fit.
             </p>
           </CardContents>
         </Card>
         <Card>
           <CardContents>
             <p>
-              There is <strong>no attribution</strong> from our side. You are
-              the owner of the material and all the insignia are yours. The only
-              thing we ask for is the proper license that allows other people to
-              extend or improve your content.
+              There is <strong>no attribution</strong> from our side. You are the owner of the
+              material and all the insignia are yours. The only thing we ask for is the proper
+              license that allows other people to extend or improve your content.
             </p>
           </CardContents>
         </Card>
         <Card>
           <CardContents>
             <p>
-              The approach we have taken allows us to provide the same quality
-              of the content in as many languages as needed to let every person
-              on the planet learn comfortably. Together, we make it{" "}
-              <strong>accessible</strong>.
+              The approach we have taken allows us to provide the same quality of the content in as
+              many languages as needed to let every person on the planet learn comfortably.
+              Together, we make it <strong>accessible</strong>.
             </p>
           </CardContents>
         </Card>
@@ -228,12 +224,7 @@ const PageMeta = () => (
 );
 
 const LandingPage = () => {
-  const {
-    missionImage,
-    featuresBgImage,
-    heroBg,
-    heroImage,
-  } = useStaticQuery(graphql`
+  const { missionImage, featuresBgImage, heroBg, heroImage } = useStaticQuery(graphql`
     query {
       missionImage: file(relativePath: { eq: "mobile-mission-image.png" }) {
         sharp: childImageSharp {

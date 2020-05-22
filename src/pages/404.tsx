@@ -28,12 +28,7 @@ const NotFound = () => {
   return (
     <Layout>
       <PageMeta />
-      <BgSection
-        Tag="section"
-        fluid={image.sharp.fluid}
-        fadeIn="soft"
-        padding="12rem 5rem"
-      >
+      <BgSection Tag="section" fluid={image.sharp.fluid} fadeIn="soft" padding="12rem 5rem">
         <h1>Sorry, the page you are trying to access is not there.</h1>
       </BgSection>
     </Layout>

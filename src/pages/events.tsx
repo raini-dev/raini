@@ -49,10 +49,7 @@ const Events = () => {
           {events.map((e: IEvent) => (
             <Card key={e.frontmatter.slug}>
               <Link to={EventURL(e.frontmatter.slug)}>
-                <Image
-                  src={YouTubeThumbnailURL(e.frontmatter.videoId)}
-                  alt={e.frontmatter.title}
-                />
+                <Image src={YouTubeThumbnailURL(e.frontmatter.videoId)} alt={e.frontmatter.title} />
               </Link>
               <CardContents>
                 <Link to={EventURL(e.frontmatter.slug)}>

@@ -25,7 +25,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const events = result.data.events.nodes;
   const docs = result.data.docs.nodes;
 
-  events.forEach((event) => {
+  events.forEach(event => {
     actions.createPage({
       path: event.frontmatter.slug,
       matchPath: `/events/${event.frontmatter.slug}`,
@@ -36,7 +36,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     });
   });
 
-  docs.forEach((doc) => {
+  docs.forEach(doc => {
     actions.createPage({
       path: doc.frontmatter.slug,
       matchPath: `/docs/${doc.frontmatter.slug}`,

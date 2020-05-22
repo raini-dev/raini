@@ -1,6 +1,6 @@
 import { css, Global } from "@emotion/core";
 import styled from "@emotion/styled";
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 import { GLOBAL_STYLES } from "../styles";
@@ -19,7 +19,7 @@ const Main = styled.main<IMainProps>`
   flex: 1 0 auto;
   height: 100%;
   align-items: center;
-  max-width: ${(p) => p.maxWidth || "100%"};
+  max-width: ${p => p.maxWidth || "100%"};
 `;
 
 interface ILayoutProps {
@@ -28,7 +28,10 @@ interface ILayoutProps {
 
 export const Layout: FC<ILayoutProps> = ({ children, maxWidth }) => {
   const { title, description } = useSiteMetadata();
-  deckDeckGoHighlightElement();
+
+  useEffect(() => {
+    deckDeckGoHighlightElement().catch(console.error);
+  }, []);
 
   return (
     <>
@@ -41,11 +44,7 @@ export const Layout: FC<ILayoutProps> = ({ children, maxWidth }) => {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
           rel="stylesheet"
         />
-        <link
-          href="/hamburger.min.css"
-          media="screen and (max-width:1280px)"
-          rel="stylesheet"
-        />
+        <link href="/hamburger.min.css" media="screen and (max-width:1280px)" rel="stylesheet" />
       </Helmet>
       <Header />
       <Main maxWidth={maxWidth}>{children}</Main>

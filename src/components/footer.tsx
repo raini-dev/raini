@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import Image from "gatsby-image";
-import React from "react";
+import React, { FC } from "react";
 import { Color } from "../constants";
-import { Route, ExternalRoute } from "../routes";
+import { ExternalRoute, Route } from "../routes";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
 
 const Logo = styled(Link)`
@@ -11,9 +11,8 @@ const Logo = styled(Link)`
 `;
 
 const StyledFooter = styled.footer`
-  margin: 3rem 0 0;
   flex-shrink: 0;
-  margin-top: auto;
+  margin: auto 0 0;
   padding: 2rem 1rem 3rem;
   background-color: ${Color.DARK_GRAY};
   color: ${Color.LIGHT_GRAY};
@@ -45,7 +44,7 @@ const SocialIconsContainer = styled.div`
   justify-content: space-between;
 `;
 
-const Footer = () => {
+const Footer: FC = () => {
   const { logo } = useStaticQuery(graphql`
     query {
       logo: file(relativePath: { eq: "logo-white.png" }) {
@@ -66,41 +65,14 @@ const Footer = () => {
         </Logo>
 
         <SocialIconsContainer>
-          <OutboundLink
-            href={ExternalRoute.TWITTER}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SocialIcon
-              src="/icon_twitter.svg"
-              alt="Twitter logo"
-              width="30"
-              height="30"
-            />
+          <OutboundLink href={ExternalRoute.TWITTER} target="_blank" rel="noopener noreferrer">
+            <SocialIcon src="/icon_twitter.svg" alt="Twitter logo" width="30" height="30" />
           </OutboundLink>
-          <OutboundLink
-            href={ExternalRoute.GITHUB}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SocialIcon
-              src="/icon_github.svg"
-              alt="GitHub logo"
-              width="30"
-              height="30"
-            />
+          <OutboundLink href={ExternalRoute.GITHUB} target="_blank" rel="noopener noreferrer">
+            <SocialIcon src="/icon_github.svg" alt="GitHub logo" width="30" height="30" />
           </OutboundLink>
-          <OutboundLink
-            href={ExternalRoute.YOUTUBE}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SocialIcon
-              src="/icon_youtube.svg"
-              alt="YouTube logo"
-              width="30"
-              height="30"
-            />
+          <OutboundLink href={ExternalRoute.YOUTUBE} target="_blank" rel="noopener noreferrer">
+            <SocialIcon src="/icon_youtube.svg" alt="YouTube logo" width="30" height="30" />
           </OutboundLink>
         </SocialIconsContainer>
       </FirstRow>

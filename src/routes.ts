@@ -7,8 +7,7 @@ export enum Route {
 export const EventURL = (slug: string) => `/events/${slug}`;
 export const DocURL = (slug: string) => `/docs/${slug}`;
 
-export const YouTubeEmbedURL = (videoId: string) =>
-  `https://youtube.com/embed/${videoId}`;
+export const YouTubeEmbedURL = (videoId: string) => `https://youtube.com/embed/${videoId}`;
 
 export const YouTubeThumbnailURL = (videoId: string) =>
   `https://i3.ytimg.com/vi/${videoId}/maxresdefault.jpg`;

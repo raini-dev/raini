@@ -1,9 +1,4 @@
-export type TDifficulty =
-  | "n/a"
-  | "novice"
-  | "elementary"
-  | "intermediate"
-  | "advanced";
+export type TDifficulty = "n/a" | "novice" | "elementary" | "intermediate" | "advanced";
 
 export interface IEventMetadata {
   title: string;

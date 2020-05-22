@@ -1,7 +1,7 @@
 import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
-import React, { useState, FC, Dispatch, SetStateAction } from "react";
+import React, { Dispatch, FC, SetStateAction, useState } from "react";
 import { Color } from "../constants";
 import { Route } from "../routes";
 
@@ -32,12 +32,11 @@ const Nav = styled.nav`
 `;
 
 const NavUl = styled.ul`
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   list-style: none;
   margin-left: 0;
-  padding-left: 0;
+  padding: 2rem 2rem 2rem 0;
 
   @media screen and (min-width: 1281px) {
     flex-direction: row;
@@ -111,7 +110,7 @@ const Burger: FC<IBurgerProps> = ({ setActive, isActive }) => (
     `}
   >
     <span className="hamburger-box">
-      <span className="hamburger-inner"></span>
+      <span className="hamburger-inner" />
     </span>
   </button>
 );
@@ -143,7 +142,7 @@ const StyledHeader = styled.header`
   }
 `;
 
-const Header = () => {
+const Header: FC = () => {
   const [isMenuActive, setMenuActive] = useState(false);
 
   return (

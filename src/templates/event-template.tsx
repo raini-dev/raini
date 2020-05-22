@@ -139,11 +139,9 @@ const EventTemplate: FC<IEventTemplateProps> = ({ data: { event } }) => (
       </p>
       <MetaWrapper>
         <TagsWrapper>
-          {((event.frontmatter.tags as unknown) as string)
-            .split(", ")
-            .map((t: string) => (
-              <Label key={t}>{t}</Label>
-            ))}
+          {((event.frontmatter.tags as unknown) as string).split(", ").map((t: string) => (
+            <Label key={t}>{t}</Label>
+          ))}
         </TagsWrapper>
         <Label>{event.frontmatter.language}</Label>
       </MetaWrapper>
