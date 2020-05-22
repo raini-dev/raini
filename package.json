@@ -13,7 +13,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "analyze": "cross-env ANALYZE_BUNDLE_SIZE=true gatsby build",
     "lighthouse": "lighthouse http://localhost:9000 --output-path=./lighthouse.html",
-    "lint": "eslint --ignore-path .gitignore --ignore-path ./static/* . --ext ts --ext tsx --ext js",
+    "lint": "eslint src/",
     "reset-cache": "rm -rf .cache public"
   },
   "dependencies": {

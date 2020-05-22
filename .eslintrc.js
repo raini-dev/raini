@@ -36,21 +36,6 @@ module.exports = {
     "react/prop-types": "off", // Disable prop-types as we use TypeScript for type checking
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/camelcase": "off",
-    "@typescript-eslint/interface-name-prefix": [
-      "warn",
-      {
-        prefixWithI: "always",
-        allowUnderscorePrefix: true,
-      },
-    ],
+    "@typescript-eslint/interface-name-prefix": "off",
   },
-  overrides: [
-    // Override some TypeScript rules just for .js files
-    {
-      files: ["*.js"],
-      rules: {
-        "@typescript-eslint/no-var-requires": "off", //
-      },
-    },
-  ],
 };
