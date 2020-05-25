@@ -1,6 +1,11 @@
 import { Mdx } from "../../graphql-types";
 import { pipeExtend } from "@raini/pipes";
-import { flattenFrontMatter, maybeStringToArray, maybeStringToString, stringToDifficulty } from "../utils";
+import {
+  flattenFrontMatter,
+  maybeStringToArray,
+  maybeStringToString,
+  stringToDifficulty,
+} from "../utils";
 
 export type TDifficulty = "n/a" | "novice" | "elementary" | "intermediate" | "advanced";
 

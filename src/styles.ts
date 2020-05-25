@@ -8,6 +8,16 @@ export const GLOBAL_STYLES = `
   margin: 0;
 }
 
+undefined {
+  display: flex;
+  justify-content: center;
+}
+
+code {
+  background-color: ${Color.LIGHT_PINK};
+  padding: 0.125rem 0.25rem;
+}
+
 deckgo-highlight-code {
   margin-bottom: 2rem;
   box-shadow: 0 0 15px ${Color.LIGHT_GRAY};
@@ -66,10 +76,13 @@ body {
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid ${Color.BLUE};
-  margin: 1.5em 5em;
   color: ${Color.DARK_BLUE};
   font-weight: 400;
   padding: 0.5em 10px;
+  
+  @media screen and (min-width: 1024px) {
+    margin: 1.5rem 5em;
+  }
 }
 
 

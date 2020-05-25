@@ -1,8 +1,8 @@
 import React from "react";
 import { Layout } from "../components/layout";
 import { useDocs } from "../hooks/use-docs";
-import { Card, CardContents } from "../components/card";
-import { Container, PageContainer } from "../components/containers";
+import { Card, CardFooter, CardList } from "../components/card";
+import { PageContainer } from "../components/containers";
 import { DocURL } from "../routes";
 import { Link } from "gatsby";
 import { Button } from "../components/buttons";
@@ -21,31 +21,30 @@ const DocsPage = () => {
   }
 
   return (
-    <Layout>
+    <>
       <Head
         title="Raini.dev | Docs"
         description="Find out how to participate in developing education with Raini.dev"
         url="https://raini.dev/docs"
       />
-      <PageContainer alignItems="center" justifyContent="space-between">
-        <h1>Documentation</h1>
-        <Container alignItems="unset">
-          {docs.map(doc => (
-            <Card key={doc.slug}>
-              <CardContents>
-                <Link to={DocURL(doc.slug)}>
-                  <h3>{doc.title}</h3>
-                </Link>
+      <Layout>
+        <PageContainer alignItems="center" justifyContent="space-between">
+          <h1>Documentation</h1>
+          <CardList>
+            {docs.map(doc => (
+              <Card key={doc.slug} title={doc.title} url={DocURL(doc.slug)}>
                 <p>{doc.excerpt}</p>
-                <Link to={DocURL(doc.slug)}>
-                  <Button>See more &rarr;</Button>
-                </Link>
-              </CardContents>
-            </Card>
-          ))}
-        </Container>
-      </PageContainer>
-    </Layout>
+                <CardFooter>
+                  <Link to={DocURL(doc.slug)}>
+                    <Button>See more &rarr;</Button>
+                  </Link>
+                </CardFooter>
+              </Card>
+            ))}
+          </CardList>
+        </PageContainer>
+      </Layout>
+    </>
   );
 };
 

@@ -5,8 +5,8 @@ import BackgroundImage from "gatsby-background-image";
 import Image from "gatsby-image";
 import React from "react";
 import { Button } from "../components/buttons";
-import { Card, CardContents } from "../components/card";
-import { Container } from "../components/containers";
+import { Card, CardList } from "../components/card";
+import { Container, PageContainer } from "../components/containers";
 import { Layout } from "../components/layout";
 import { BgSection, Section } from "../components/sections";
 import { Route } from "../routes";
@@ -117,6 +117,8 @@ const LandingPage = () => {
 
   return (
     <>
+      <Head />
+
       <BgImage Tag="section" fluid={heroBg?.sharp?.fluid as undefined} fadeIn="soft">
         <HeroImage
           fluid={heroImage?.sharp?.fluid as undefined}
@@ -160,56 +162,46 @@ const LandingPage = () => {
             <h1>Raini.dev</h1>
             <p>A place to collaborate on teaching.</p>
             <Link to={Route.DOCS}>
-              <Button type="button">Join us</Button>
+              <Button type="button">Learn More</Button>
             </Link>
           </div>
         </Container>
       </BgImage>
       <Layout>
-        <Head />
-        <BgSection Tag="section" fluid={featuresBgImage?.sharp?.fluid as undefined} fadeIn="soft">
-          <Container direction="column" maxWidth="1024px">
+        <BgSection Tag="section" fluid={featuresBgImage?.sharp?.fluid as undefined}>
+          <PageContainer alignItems="center">
             <h2>How we do it</h2>
-            <Container justifyContent="space-around">
+            <CardList>
               <Card>
-                <CardContents>
-                  <p>
-                    We treat education as an <strong>Open Source</strong> project. Together, we are
-                    able to improve the quality of the education content based on real knowledge and
-                    vivid experience of developers from all over the world.
-                  </p>
-                </CardContents>
+                <p>
+                  We treat education as an <strong>Open Source</strong> project. Together, we are
+                  able to improve the quality of the education content based on real knowledge and
+                  vivid experience of developers from all over the world.
+                </p>
               </Card>
               <Card>
-                <CardContents>
-                  <p>
-                    <strong>Contribution</strong> is easy. We&apos;ve prepared several guides on how
-                    to bring the material to its best shape. Don&apos;t have time for that? Just
-                    land what you have and someone will <strong>contribute</strong> to it to make it
-                    fit.
-                  </p>
-                </CardContents>
+                <p>
+                  <strong>Contribution</strong> is easy. We&apos;ve prepared several guides on how
+                  to bring the material to its best shape. Don&apos;t have time for that? Just land
+                  what you have and someone will <strong>contribute</strong> to it to make it fit.
+                </p>
               </Card>
               <Card>
-                <CardContents>
-                  <p>
-                    There is <strong>no attribution</strong> from our side. You are the owner of the
-                    material and all the insignia are yours. The only thing we ask for is the proper
-                    license that allows other people to extend or improve your content.
-                  </p>
-                </CardContents>
+                <p>
+                  There is <strong>no attribution</strong> from our side. You are the owner of the
+                  material and all the insignia are yours. The only thing we ask for is the proper
+                  license that allows other people to extend or improve your content.
+                </p>
               </Card>
               <Card>
-                <CardContents>
-                  <p>
-                    The approach we have taken allows us to provide the same quality of the content
-                    in as many languages as needed to let every person on the planet learn
-                    comfortably. Together, we make it <strong>accessible</strong>.
-                  </p>
-                </CardContents>
+                <p>
+                  The approach we have taken allows us to provide the same quality of the content in
+                  as many languages as needed to let every person on the planet learn comfortably.
+                  Together, we make it <strong>accessible</strong>.
+                </p>
               </Card>
-            </Container>
-          </Container>
+            </CardList>
+          </PageContainer>
         </BgSection>
         <Section>
           <MissionContainer>
@@ -225,7 +217,7 @@ const LandingPage = () => {
                 professionals and accessible to everyone.
               </Mission>
               <Link to={Route.DOCS}>
-                <Button type="button">Join us</Button>
+                <Button type="button">Learn More</Button>
               </Link>
             </MissionTextWrapper>
           </MissionContainer>

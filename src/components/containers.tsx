@@ -7,6 +7,7 @@ interface IContainerProps {
   direction?: string;
   alignItems?: string;
   maxWidth?: string;
+  textAlign?: string;
 }
 
 export const Container = styled.div<IContainerProps>`
@@ -21,9 +22,18 @@ export const Container = styled.div<IContainerProps>`
 `;
 
 export const PageContainer = styled(Container)`
-  align-items: center;
+  justify-content: center;
   max-width: 1024px;
-  padding: 0 1rem 1rem;
+  padding: 0 1rem;
+
+  & > h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: ${p => p.textAlign || "center"};
+  }
 
   > * {
     width: 100%;

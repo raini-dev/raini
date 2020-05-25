@@ -19,21 +19,23 @@ const NotFound = () => {
   `);
 
   return (
-    <Layout>
+    <>
       <Head
         title="Raini.dev | 404"
         description="Sorry, the page you are trying to access is not there."
         url="https://raini.dev/404"
       />
-      <BgSection
-        Tag="section"
-        fluid={image?.sharp?.fluid as undefined}
-        fadeIn="soft"
-        padding="12rem 5rem"
-      >
-        <h1>Sorry, the page you are trying to access is not there.</h1>
-      </BgSection>
-    </Layout>
+      <Layout>
+        <BgSection
+          Tag="section"
+          fluid={image?.sharp?.fluid as undefined}
+          fadeIn="soft"
+          padding="12rem 5rem"
+        >
+          <h1>Sorry, the page you are trying to access is not there.</h1>
+        </BgSection>
+      </Layout>
+    </>
   );
 };
 

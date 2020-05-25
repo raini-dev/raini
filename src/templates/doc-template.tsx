@@ -31,18 +31,20 @@ const DocTemplate: FC<IDocTemplateProps> = ({ data }) => {
   const doc = DocModel.of(data.doc);
 
   return (
-    <Layout>
+    <>
       <Head
         title={doc.title}
         description={doc.excerpt}
         url={`https://raini.dev/${DocURL(doc.slug)}`}
       />
-      <PageContainer>
-        <h1>{doc.title}</h1>
-        <MDXRenderer>{doc.body ?? ""}</MDXRenderer>
-        <Link to={Route.DOCS}>&larr; Back to all events</Link>
-      </PageContainer>
-    </Layout>
+      <Layout>
+        <PageContainer textAlign={"left"}>
+          <h1>{doc.title}</h1>
+          <MDXRenderer>{doc.body ?? ""}</MDXRenderer>
+          <Link to={Route.DOCS}>&larr; Back to docs</Link>
+        </PageContainer>
+      </Layout>
+    </>
   );
 };
 
