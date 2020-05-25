@@ -3,100 +3,70 @@ title: Course Difficulty
 slug: course-difficulty
 ---
 
-There are five difficulty levels we outlined for courses, workshops and other events that occur in Raini.dev. These levels convey very specific logic that is going to be outlined here.
+There are five difficulty levels for courses, workshops and other events that occur in Raini.dev. This document outlines their meaning.
 
 The five possible difficulty levels are:
 
-- n/a
-- novice
-- elementary
-- intermediate
-- advanced
+- [n/a](#n/a)
+- [novice](#novice)
+- [elementary](#elementary)
+- [intermediate](#intermediate)
+- [advanced](#advanced)
 
-The difficulty level of the workshop MUST be defined as two [shield.io](http://shields.io) badges, one for theory and one for practice. A workshop difficulty badge MUST be a link to this page (Workshop Difficulty Levels). To add badges to your repository, copy the suitable snippets given below. A workshop repository MUST have both the theory badge and the practice badge at the very top of the `README.md` file.
+The difficulty level of the content MUST be defined as a [shield.io](http://shields.io) badge nested inside a link to this page (Difficulty Levels). To add badges to your repository, copy the suitable snippet from the ones given below, and put it at the very top of the `README.md` file.
 
 ## A note on prerequisites
 
-Difficulty levels of elementary and higher provide requirements from attendees that need to be met to feel comfortable during the workshop. The prerequisites MUST be outlined in the description of the workshop. If the prerequisites provide specific information to be studied, the information MUST be publicly available, free or paid. The prerequisites MAY be other workshops, articles, books, tutorials, etc.
+Difficulty levels of elementary and higher provide requirements from attendees that need to be met to feel comfortable during the workshop. The prerequisites MUST be outlined in the description of the workshop. If the prerequisites provide specific information to be studied, the information MUST be publicly available, free or paid. The prerequisites MAY be workshops, articles, books, tutorials, etc.
 
 ## Difficulty level descriptions
 
 ### n/a
 
-This badge indicates that the block is out of the scope of the workshop. Applicable, if a workshop does not have a theoretical or practical part.
+This badge indicates that the difficulty of the content was not specified.
 
-[![theory: n/a](https://img.shields.io/badge/theory-n%2Fa-lightgrey)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
-
-```markdown
-[![theory: n/a](https://img.shields.io/badge/theory-n%2Fa-lightgrey)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
-```
-
-[![practice: n/a](https://img.shields.io/badge/practice-n%2Fa-lightgrey)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
+[![difficulty: n/a](https://img.shields.io/badge/difficulty-n%2Fa-lightgrey)](https://raini.dev/docs/content-difficulty)
 
 ```markdown
-[![practice: n/a](https://img.shields.io/badge/practice-n%2Fa-lightgrey)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
+[![difficulty: n/a](https://img.shields.io/badge/difficulty-n%2Fa-lightgrey)](https://raini.dev/docs/content-difficulty)
 ```
 
 ### novice
 
 The workshop is self-explanatory and NO prerequisites are required from attendees.
 
-[![theory: novice](https://img.shields.io/badge/theory-novice-green)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
+[![difficulty: novice](https://img.shields.io/badge/difficulty-novice-green)](https://raini.dev/docs/content-difficulty)
 
 ```markdown
-[![theory: novice](https://img.shields.io/badge/theory-novice-green)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
-```
-
-[![practice: novice](https://img.shields.io/badge/practice-novice-green)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
-
-```markdown
-[![practice: novice](https://img.shields.io/badge/practice-novice-green)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
+[![difficulty: novice](https://img.shields.io/badge/difficulty-novice-green)](https://raini.dev/docs/content-difficulty)
 ```
 
 ### elementary
 
-The workshop requires basic understanding of the concepts from the workshop.
+The content requires basic understanding of the concepts from the workshop.
 
-[![theory: elementary](https://img.shields.io/badge/theory-elementary-yellow)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
+[![difficulty: elementary](https://img.shields.io/badge/difficulty-elementary-yellow)](https://raini.dev/docs/content-difficulty)
 
 ```markdown
-[![theory: elementary](https://img.shields.io/badge/theory-elementary-yellow)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
+[![difficulty: elementary](https://img.shields.io/badge/difficulty-elementary-yellow)](https://raini.dev/docs/content-difficulty)
 ```
 
-[![practice: elementary](https://img.shields.io/badge/practice-elementary-yellow)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
+### intermediate
+
+The content requires good understanding and experience with the concepts.
+
+[![difficulty: intermediate](https://img.shields.io/badge/difficulty-intermediate-orange)](https://raini.dev/docs/content-difficulty)
 
 ```markdown
-[![practice: elementary](https://img.shields.io/badge/practice-elementary-yellow)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
+[![difficulty: intermediate](https://img.shields.io/badge/difficulty-intermediate-orange)](https://raini.dev/docs/content-difficulty)
 ```
 
-## intermediate
+### advanced
 
-The workshop requires good understanding and experience with the concepts from the workshop.
+The content requires deep understanding and experience with the concepts. MAY cover non-standard approaches. MAY require additional preparation.
 
-[![theory: intermediate](https://img.shields.io/badge/theory-intermediate-orange)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
-
-```markdown
-[![theory: intermediate](https://img.shields.io/badge/theory-intermediate-orange)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
-```
-
-[![practice: intermediate](https://img.shields.io/badge/practice-intermediate-orange)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
+[![difficulty: advanced](https://img.shields.io/badge/difficulty-advanced-red)](https://raini.dev/docs/content-difficulty)
 
 ```markdown
-[![practice: intermediate](https://img.shields.io/badge/practice-intermediate-orange)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
-```
-
-## advanced
-
-The workshop requires deep understanding and experience with the conceptsfrom the workshop. MAY cover non-standard approaches. MAY require additional preparation.
-
-[![theory: advanced](https://img.shields.io/badge/theory-advanced-red)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
-
-```markdown
-[![theory: advanced](https://img.shields.io/badge/theory-advanced-red)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
-```
-
-[![practice: advanced](https://img.shields.io/badge/practice-advanced-red)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
-
-```markdown
-[![practice: advanced](https://img.shields.io/badge/practice-advanced-red)](https://github.com/raini-dev/raini/blob/master/docs/workshop-difficulty-levels.md)
+[![difficulty: advanced](https://img.shields.io/badge/difficulty-advanced-red)](https://raini.dev/docs/content-difficulty)
 ```
