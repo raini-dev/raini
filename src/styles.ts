@@ -59,39 +59,6 @@ body {
   }
 }
 
-.breadcrumb__list {
-  display: flex;
-  font-size: 0.725rem;
-  color: ${Color.DARK_GRAY};
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.breadcrumb__list__item {
-  margin: 0 0.5rem;
-
-  &:first-of-type {
-    margin-left: 0;
-  }
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-}
-
-.breadcrumb__link {
-  color: ${Color.DARK_GRAY};
-  text-decoration: none;
-  font-weight: 400;
-}
-
-.breadcrumb__link__active {
-  color: ${Color.DARKER_PINK};
-}
-
-
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid ${Color.BLUE};
