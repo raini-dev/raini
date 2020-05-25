@@ -8,7 +8,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics";
 import { useSharp } from "../hooks/use-sharp";
 
 const Logo = styled(Link)`
-  width: 90px;
+  width: 121px;
 `;
 
 const StyledFooter = styled.footer`
@@ -32,7 +32,7 @@ const FirstRow = styled.div`
 
   @media screen and (min-width: 1281px) {
     flex-direction: row;
-    width: 1000px;
+    width: 1024px;
   }
 `;
 
