@@ -29,6 +29,7 @@ module.exports = {
         theme_color: `#e2bac4`,
         icon: `assets/images/favicon.png`,
         display: `standalone`,
+        cache_busting_mode: "none",
         icon_options: {
           // https://developer.mozilla.org/en-US/docs/Web/Manifest
           // https://w3c.github.io/manifest/#purpose-member
@@ -36,7 +37,14 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-offline",
+    {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        workboxConfig: {
+          globPatterns: ["**/*"],
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {

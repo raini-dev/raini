@@ -1,22 +1,11 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { BgSection } from "../components/sections";
 import { Layout } from "../components/layout";
-import { LogoImageQuery } from "../../graphql-types";
 import Head from "../components/head";
+import { useSharp } from "../hooks/use-sharp";
 
 const NotFound = () => {
-  const { image }: LogoImageQuery = useStaticQuery(graphql`
-    query LogoImage {
-      image: file(relativePath: { eq: "landing-spot.png" }) {
-        sharp: childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `);
+  const { featuresBgImage } = useSharp();
 
   return (
     <>
@@ -28,9 +17,10 @@ const NotFound = () => {
       <Layout>
         <BgSection
           Tag="section"
-          fluid={image?.sharp?.fluid as undefined}
+          fluid={featuresBgImage}
           fadeIn="soft"
           padding="12rem 5rem"
+          margin="10rem 0 0"
         >
           <h1>Sorry, the page you are trying to access is not there.</h1>
         </BgSection>

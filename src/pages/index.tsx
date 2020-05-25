@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 import Image from "gatsby-image";
 import React from "react";
@@ -9,9 +9,9 @@ import { Container, PageContainer } from "../components/containers";
 import { Layout } from "../components/layout";
 import { BgSection, Section } from "../components/sections";
 import { Route } from "../routes";
-import { LandingPageImagesQuery } from "../../graphql-types";
 import Head from "../components/head";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
+import { useSharp } from "../hooks/use-sharp";
 
 const BgImage = styled(BackgroundImage)`
   background-position: center;
@@ -43,7 +43,7 @@ const HeroImage = styled(Image)`
   }
 `;
 
-const HeroCTH = styled.div`
+const HeroCTA = styled.div`
   padding: 1rem;
   width: 80%;
 
@@ -93,64 +93,28 @@ const MissionTextWrapper = styled.div`
 const LandingPage = () => {
   const { description } = useSiteMetadata();
 
-  const {
-    missionImage,
-    featuresBgImage,
-    heroBg,
-    heroImage,
-  }: LandingPageImagesQuery = useStaticQuery(graphql`
-    query LandingPageImages {
-      missionImage: file(relativePath: { eq: "mobile-mission-image.png" }) {
-        sharp: childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-      featuresBgImage: file(relativePath: { eq: "landing-spot.png" }) {
-        sharp: childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-      heroBg: file(relativePath: { eq: "mobile-header-bg.png" }) {
-        sharp: childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-      heroImage: file(relativePath: { eq: "mobile-hero-people.png" }) {
-        sharp: childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `);
+  const { missionImage, featuresBgImage, heroBg, heroImage } = useSharp();
 
   return (
     <>
       <Head />
 
-      <BgImage Tag="section" fluid={heroBg?.sharp?.fluid as undefined} fadeIn="soft">
+      <BgImage Tag="section" fluid={heroBg} fadeIn="soft">
         <HeroImage
-          fluid={heroImage?.sharp?.fluid as undefined}
+          fluid={heroImage}
           alt="Simple graphics with two students sitting with their laptops and a teacher conducting a course online appears on the TV screen on the wall."
           fadeIn
         />
-        <HeroCTH>
+        <HeroCTA>
           <h1>Raini.dev</h1>
           <p>{description}</p>
           <Link to={Route.DOCS}>
             <Button type="button">Learn More</Button>
           </Link>
-        </HeroCTH>
+        </HeroCTA>
       </BgImage>
       <Layout>
-        <BgSection Tag="section" fluid={featuresBgImage?.sharp?.fluid as undefined}>
+        <BgSection Tag="section" fluid={featuresBgImage}>
           <PageContainer alignItems="center">
             <h2>How we do it</h2>
             <CardList>
@@ -188,7 +152,7 @@ const LandingPage = () => {
         <Section>
           <MissionContainer>
             <MissionImage
-              fluid={missionImage?.sharp?.fluid as undefined}
+              fluid={missionImage}
               alt="Simple graphics with a person using their PC."
               fadeIn
             />
