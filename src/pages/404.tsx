@@ -2,16 +2,8 @@ import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { BgSection } from "../components/sections";
 import { Layout } from "../components/layout";
-import { HelmetWrapper } from "../components/helmet-wrapper";
 import { LogoImageQuery } from "../../graphql-types";
-
-const PageMeta = () => (
-  <HelmetWrapper
-    title="Raini.dev | 404"
-    description="Sorry, the page you are trying to access is not there."
-    url="https://raini.dev/404"
-  />
-);
+import Head from "../components/head";
 
 const NotFound = () => {
   const { image }: LogoImageQuery = useStaticQuery(graphql`
@@ -28,7 +20,11 @@ const NotFound = () => {
 
   return (
     <Layout>
-      <PageMeta />
+      <Head
+        title="Raini.dev | 404"
+        description="Sorry, the page you are trying to access is not there."
+        url="https://raini.dev/404"
+      />
       <BgSection
         Tag="section"
         fluid={image?.sharp?.fluid as undefined}

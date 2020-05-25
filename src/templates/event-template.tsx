@@ -5,13 +5,13 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import React, { FC } from "react";
 import { AddToCalendar } from "../components/add-to-calendar";
 import { PageContainer } from "../components/containers";
-import { HelmetWrapper } from "../components/helmet-wrapper";
 import { Label } from "../components/label";
 import { Layout } from "../components/layout";
 import { Color, DifficultyColor } from "../constants";
-import { EventURL, Route, YouTubeEmbedURL } from "../routes";
+import { EventURL, Route, YouTubeEmbedURL, YouTubeThumbnailURL } from "../routes";
 import { EventModel, IEvent } from "../models/event";
 import { Mdx } from "../../graphql-types";
+import Head from "../components/head";
 
 export const query = graphql`
   query EventQuery($slug: String!) {
@@ -103,20 +103,26 @@ interface IPageMetaProps {
 }
 
 const PageMeta: FC<IPageMetaProps> = ({ event }) => (
-  <HelmetWrapper
-    title={`Raini.dev | ${event.title}`}
-    description={event.excerpt ?? ""}
-    url={`https://raini.dev${EventURL(event.slug)}`}
-    imageUrl={YouTubeEmbedURL(event.videoId)}
-  >
-    {/* <!-- AddEvent script --> */}
-    <script
-      type="text/javascript"
-      src="https://addevent.com/libs/atc/1.6.1/atc.min.js"
-      async
-      defer
-    />
-  </HelmetWrapper>
+  <Head
+    title={event.title}
+    description={event.excerpt}
+    image={
+      {
+        src: YouTubeThumbnailURL(event.videoId),
+        width: 1219,
+        height: 685,
+      } as any
+    }
+    url={`https://raini.dev/${EventURL(event.slug)}`}
+    scripts={[
+      {
+        type: "text/javascript",
+        src: "https://addevent.com/libs/atc/1.6.1/atc.min.js",
+        async: "async",
+        defer: "defer",
+      },
+    ]}
+  />
 );
 
 interface IEventTemplateProps {

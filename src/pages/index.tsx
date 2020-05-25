@@ -7,11 +7,11 @@ import React from "react";
 import { Button } from "../components/buttons";
 import { Card, CardContents } from "../components/card";
 import { Container } from "../components/containers";
-import { HelmetWrapper } from "../components/helmet-wrapper";
 import { Layout } from "../components/layout";
 import { BgSection, Section } from "../components/sections";
 import { Route } from "../routes";
 import { LandingPageImagesQuery } from "../../graphql-types";
+import Head from "../components/head";
 
 const BgImage = styled(BackgroundImage)`
   background-position: right top;
@@ -76,14 +76,6 @@ const MissionTextWrapper = styled.div`
   align-items: center;
 `;
 
-const PageMeta = () => (
-  <HelmetWrapper
-    title="Raini.dev | Hello!"
-    description="Raini.dev is a place where developers, designers, analysts, testers and managers share their experience."
-    url="https://raini.dev"
-  />
-);
-
 const LandingPage = () => {
   const {
     missionImage,
@@ -113,7 +105,6 @@ const LandingPage = () => {
           }
         }
       }
-
       heroImage: file(relativePath: { eq: "mobile-hero-people.png" }) {
         sharp: childImageSharp {
           fluid {
@@ -175,7 +166,7 @@ const LandingPage = () => {
         </Container>
       </BgImage>
       <Layout>
-        <PageMeta />
+        <Head />
         <BgSection Tag="section" fluid={featuresBgImage?.sharp?.fluid as undefined} fadeIn="soft">
           <Container direction="column" maxWidth="1024px">
             <h2>How we do it</h2>

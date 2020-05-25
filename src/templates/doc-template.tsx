@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import { graphql, Link } from "gatsby";
-import { HelmetWrapper } from "../components/helmet-wrapper";
 import { Layout } from "../components/layout";
 import { DocURL, Route } from "../routes";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { PageContainer } from "../components/containers";
-import { DocModel, IDoc } from "../models/doc";
+import { DocModel } from "../models/doc";
 import { Mdx } from "../../graphql-types";
+import Head from "../components/head";
 
 export const query = graphql`
   query($slug: String!) {
@@ -21,18 +21,6 @@ export const query = graphql`
   }
 `;
 
-interface IPageMetaProps {
-  doc: IDoc;
-}
-
-const PageMeta: FC<IPageMetaProps> = ({ doc }) => (
-  <HelmetWrapper
-    title="Raini.dev | How to become Raini.dev Teacher"
-    description="Find out how to participate in developing education with Raini.dev."
-    url={DocURL(doc.slug)}
-  />
-);
-
 interface IDocTemplateProps {
   data: {
     doc: Partial<Mdx>;
@@ -44,7 +32,11 @@ const DocTemplate: FC<IDocTemplateProps> = ({ data }) => {
 
   return (
     <Layout>
-      <PageMeta doc={doc} />
+      <Head
+        title={doc.title}
+        description={doc.excerpt}
+        url={`https://raini.dev/${DocURL(doc.slug)}`}
+      />
       <PageContainer>
         <h1>{doc.title}</h1>
         <MDXRenderer>{doc.body ?? ""}</MDXRenderer>

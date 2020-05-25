@@ -6,6 +6,7 @@ export interface ISiteMetadata {
   siteUrl: string;
   title: string;
   description: string;
+  author: string;
 }
 
 export const SiteMetadataModel = {
@@ -14,6 +15,7 @@ export const SiteMetadataModel = {
       maybeStringToString<ISiteMetadata>("title", "Raini.dev"),
     )
       .pipeExtend(maybeStringToString<ISiteMetadata>("siteUrl", "https://raini.dev"))
+      .pipeExtend(maybeStringToString<ISiteMetadata>("author", "Raini.dev"))
       .pipeExtend(maybeStringToString<ISiteMetadata>("description"))
       .process(() => siteMeta),
 };

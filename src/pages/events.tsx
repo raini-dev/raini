@@ -4,11 +4,11 @@ import React from "react";
 import { Button } from "../components/buttons";
 import { Card, CardContents } from "../components/card";
 import { Container, PageContainer } from "../components/containers";
-import { HelmetWrapper } from "../components/helmet-wrapper";
 import { Label } from "../components/label";
 import { Layout } from "../components/layout";
 import { useEvents } from "../hooks/use-events";
 import { EventURL, YouTubeThumbnailURL } from "../routes";
+import Head from "../components/head";
 
 const Image = styled.img`
   width: 100%;
@@ -28,20 +28,16 @@ const EventInfo = styled.div`
   flex-shrink: 0;
 `;
 
-const PageMeta = () => (
-  <HelmetWrapper
-    title="Raini.dev | Events"
-    description="All Raini.dev events happening worldwide and online, gathered in one place."
-    url="https://raini.dev/events"
-  />
-);
-
 const EventsPage = () => {
   const events = useEvents();
 
   return (
     <Layout>
-      <PageMeta />
+      <Head
+        title="Raini.dev | Events"
+        description="All Raini.dev events happening worldwide and online, gathered in one place."
+        url="https://raini.dev/events"
+      />
       <PageContainer>
         <h1>Events</h1>
         <Container>

@@ -12,7 +12,8 @@ module.exports = {
     siteUrl,
     title: "Raini.dev | Meet Raini.dev",
     description:
-      "Raini.dev is a place where developers, designers, analysts, testers and managers share their experience.",
+      "Raini.dev is an open sourced online learning and teaching space. Learn programming, marketing, data science and more. Empowered by professionals from all over the world.",
+    author: "Raini.dev",
   },
   plugins: [
     "gatsby-plugin-emotion",
@@ -36,13 +37,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-offline",
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: `https://www.raini.dev`,
-        stripQueryString: true,
-      },
-    },
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
@@ -78,9 +72,6 @@ module.exports = {
         gatsbyRemarkPlugins: [
           {
             resolve: "gatsby-remark-images",
-            options: {
-              sizeByPixelDensity: true,
-            },
           },
           {
             resolve: "gatsby-remark-highlight-code",

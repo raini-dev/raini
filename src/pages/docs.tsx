@@ -1,5 +1,4 @@
 import React from "react";
-import { HelmetWrapper } from "../components/helmet-wrapper";
 import { Layout } from "../components/layout";
 import { useDocs } from "../hooks/use-docs";
 import { Card, CardContents } from "../components/card";
@@ -8,14 +7,7 @@ import { DocURL } from "../routes";
 import { Link } from "gatsby";
 import { Button } from "../components/buttons";
 import { UnderConstructionEmoji } from "../components/emoji";
-
-const PageMeta = () => (
-  <HelmetWrapper
-    title="Raini.dev | Docs"
-    description="Find out how to participate in developing education with Raini.dev."
-    url="https://raini.dev/docs"
-  />
-);
+import Head from "../components/head";
 
 const DocsPage = () => {
   const docs = useDocs();
@@ -30,7 +22,11 @@ const DocsPage = () => {
 
   return (
     <Layout>
-      <PageMeta />
+      <Head
+        title="Raini.dev | Docs"
+        description="Find out how to participate in developing education with Raini.dev"
+        url="https://raini.dev/docs"
+      />
       <PageContainer alignItems="center" justifyContent="space-between">
         <h1>Documentation</h1>
         <Container alignItems="unset">

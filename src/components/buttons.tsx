@@ -10,7 +10,7 @@ export const Button = styled.button<IButtonProps>`
   border: 2px solid ${p => p.color || Color.DARKER_PINK};
   border-radius: 25px;
   padding: 0.5rem 2rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
   font-size: 0.925rem;
   transition: all 0.2s ease-in-out;
