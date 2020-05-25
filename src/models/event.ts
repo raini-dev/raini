@@ -1,6 +1,6 @@
 import { Mdx } from "../../graphql-types";
 import { pipeExtend } from "@raini/pipes";
-import { maybeStringToArray, maybeStringToString, stringToDifficulty } from "../utils";
+import { flattenFrontMatter, maybeStringToArray, maybeStringToString, stringToDifficulty } from "../utils";
 
 export type TDifficulty = "n/a" | "novice" | "elementary" | "intermediate" | "advanced";
 
@@ -21,17 +21,6 @@ export interface IEvent {
   excerpt: string;
 }
 
-const mdxToEvent = (ctx: Partial<Mdx>): IEvent => {
-  const event = {
-    ...ctx,
-    ...ctx.frontmatter,
-  };
-
-  delete event.frontmatter;
-
-  return (event as unknown) as IEvent;
-};
-
 export const EventModel = {
   of: (event: Partial<Mdx> = {}): IEvent =>
     pipeExtend(maybeStringToArray<IEvent>("authors"))
@@ -50,6 +39,6 @@ export const EventModel = {
       .pipeExtend(stringToDifficulty<IEvent>("theory"))
       .pipeExtend(maybeStringToString<IEvent>("practice"))
       .pipeExtend(stringToDifficulty<IEvent>("practice"))
-      .process(() => mdxToEvent(event)),
+      .process(() => flattenFrontMatter<IEvent>(event)),
   batch: (events: Partial<Mdx>[] = []): IEvent[] => events.map(EventModel.of),
 };

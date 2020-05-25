@@ -1,4 +1,5 @@
 import Switch from "@raini/switch";
+import { Mdx } from "../graphql-types";
 
 export const isString = (x: unknown): x is string => typeof x == "string";
 export const isNovice = (x: string): boolean => x.toLowerCase() === "novice";
@@ -30,3 +31,14 @@ export const stringToDifficulty = <T, K extends keyof T = keyof T>(key: K) => (c
     .case(isAdvanced, "advanced")
     .default("n/a"),
 });
+
+export const flattenFrontMatter = <T>(ctx: Partial<Mdx>): T => {
+  const doc = {
+    ...ctx,
+    ...ctx.frontmatter,
+  };
+
+  delete doc.frontmatter;
+
+  return (doc as unknown) as T;
+};
