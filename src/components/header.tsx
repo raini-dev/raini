@@ -51,7 +51,7 @@ const NavLi = styled.li`
 
 const NavLink = styled(Link)`
   color: #222;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1;
   padding: 2rem;
@@ -83,7 +83,7 @@ const Navigation: FC<INavigationProps> = ({ isActive }) => (
 
       <NavLi>
         <NavLink to={Route.DOCS} activeClassName="current-page">
-          Documentation
+          Docs
         </NavLink>
       </NavLi>
     </NavUl>

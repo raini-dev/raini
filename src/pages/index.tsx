@@ -1,4 +1,3 @@
-import { css } from "@emotion/core";
 import styled from "@emotion/styled";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
@@ -12,16 +11,18 @@ import { BgSection, Section } from "../components/sections";
 import { Route } from "../routes";
 import { LandingPageImagesQuery } from "../../graphql-types";
 import Head from "../components/head";
+import { useSiteMetadata } from "../hooks/use-site-metadata";
 
 const BgImage = styled(BackgroundImage)`
-  background-position: right top;
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
+  padding: 6rem 0;
   background-repeat: no-repeat;
-  padding: 5rem 5rem 0 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  overflow-x: hidden;
 
   @media screen and (min-width: 662px) {
     flex-direction: row-reverse;
@@ -30,16 +31,25 @@ const BgImage = styled(BackgroundImage)`
 
 const HeroImage = styled(Image)`
   max-width: 1024px;
-  width: 100%;
+  width: 80%;
 
   @media screen and (min-width: 662px) {
-    width: 40%;
-    margin-right: 5%;
+    width: 100%;
+    margin-right: 5rem;
+  }
+`;
+
+const HeroCTH = styled.div`
+  padding: 1rem;
+  width: 80%;
+
+  @media screen and (min-width: 662px) {
+    width: 100%;
+    padding: 5rem;
   }
 
-  @media screen and (min-width: 1281px) {
-    width: 40%;
-    margin-right: 15%;
+  > p {
+    margin-bottom: 1rem;
   }
 `;
 
@@ -77,6 +87,8 @@ const MissionTextWrapper = styled.div`
 `;
 
 const LandingPage = () => {
+  const { description } = useSiteMetadata();
+
   const {
     missionImage,
     featuresBgImage,
@@ -125,47 +137,13 @@ const LandingPage = () => {
           alt="Simple graphics with two students sitting with their laptops and a teacher conducting a course online appears on the TV screen on the wall."
           fadeIn
         />
-        <Container
-          direction="column"
-          css={css`
-            align-self: center;
-            text-align: center;
-
-            > div {
-              align-self: center;
-              text-align: center;
-              > p {
-                margin-bottom: 1.5rem;
-              }
-            }
-
-            @media screen and (min-width: 662px) {
-              margin-left: 5%;
-              > div {
-                margin-right: auto;
-                max-width: 100%;
-
-                > p {
-                  margin-bottom: 1.5rem;
-                }
-              }
-            }
-
-            @media screen and (min-width: 1281px) {
-              text-align: unset;
-              margin-left: 15%;
-              align-items: flex-start;
-            }
-          `}
-        >
-          <div>
-            <h1>Raini.dev</h1>
-            <p>A place to collaborate on teaching.</p>
-            <Link to={Route.DOCS}>
-              <Button type="button">Learn More</Button>
-            </Link>
-          </div>
-        </Container>
+        <HeroCTH>
+          <h1>Raini.dev</h1>
+          <p>{description}</p>
+          <Link to={Route.DOCS}>
+            <Button type="button">Learn More</Button>
+          </Link>
+        </HeroCTH>
       </BgImage>
       <Layout>
         <BgSection Tag="section" fluid={featuresBgImage?.sharp?.fluid as undefined}>
