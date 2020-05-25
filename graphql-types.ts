@@ -3097,7 +3097,7 @@ export type AllEventsQuery = { allMdx: { events: Array<(
 export type FixedImagesQueryVariables = {};
 
 
-export type FixedImagesQuery = { ogImage1200x1200?: Maybe<{ sharp?: Maybe<{ fixed?: Maybe<Pick<ImageSharpFixed, 'aspectRatio' | 'src' | 'srcSet' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }> };
+export type FixedImagesQuery = { ogImage1200x1200?: Maybe<{ sharp?: Maybe<{ fixed?: Maybe<Pick<ImageSharpFixed, 'aspectRatio' | 'src' | 'srcSet' | 'base64' | 'width' | 'height' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }> };
 
 export type FluidImagesQueryVariables = {};
 

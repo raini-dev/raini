@@ -3,6 +3,7 @@ import { Helmet, LinkProps, MetaProps } from "react-helmet";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 import { useFixedImages } from "../hooks/use-fixed-images";
 import { IFixedObject } from "gatsby-background-image";
+import { withHost } from "../routes";
 
 interface ISeoProps {
   description?: string;
@@ -39,7 +40,7 @@ const Head: FC<ISeoProps> = ({
   const pageTitle = title ?? defaultTitle;
   const metaAuthor = author ?? defaultAuthor;
   const metaUrl = url ?? defaultUrl;
-  const metaImage = image || defaultImage;
+  const metaImage = image ?? defaultImage;
 
   const defaultMeta: MetaProps[] = [
     {
@@ -86,37 +87,30 @@ const Head: FC<ISeoProps> = ({
       href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap",
     },
     {
-      href: "/hamburger.min.css",
+      href: withHost("/hamburger.min.css"),
       media: "screen and (max-width:1280px)",
       rel: "stylesheet",
     },
   ];
 
-  const defaultImageMeta: MetaProps[] = metaImage
-    ? [
-        {
-          property: "og:image",
-          content: metaImage.src,
-        },
-        {
-          property: "og:image:width",
-          content: String(metaImage.width),
-        },
-        {
-          property: "og:image:height",
-          content: String(metaImage.height),
-        },
-        {
-          name: "twitter:card",
-          content: "summary_large_image",
-        },
-      ]
-    : [
-        {
-          name: "twitter:card",
-          content: "summary",
-        },
-      ];
+  const defaultImageMeta: MetaProps[] = [
+    {
+      property: "og:image",
+      content: metaImage.src,
+    },
+    {
+      property: "og:image:width",
+      content: String(metaImage.width),
+    },
+    {
+      property: "og:image:height",
+      content: String(metaImage.height),
+    },
+    {
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+  ];
 
   return (
     <Helmet

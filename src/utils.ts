@@ -42,3 +42,10 @@ export const flattenFrontMatter = <T>(ctx: Partial<Mdx>): T => {
 
   return (item as unknown) as T;
 };
+
+type TUnary<T, K> = (x: T) => K;
+
+export const Id = <T>(x: T) => ({
+  map: <K>(f: TUnary<T, K>) => Id(f(x)),
+  fold: <K>(f: TUnary<T, K>) => f(x),
+});

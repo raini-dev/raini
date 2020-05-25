@@ -12,7 +12,6 @@ const NotFound = () => {
       <Head
         title="Raini.dev | 404"
         description="Sorry, the page you are trying to access is not there."
-        url="https://raini.dev/404"
       />
       <Layout>
         <BgSection

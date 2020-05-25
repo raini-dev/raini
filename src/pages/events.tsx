@@ -6,7 +6,7 @@ import { PageContainer } from "../components/containers";
 import { Label, LabelsList } from "../components/label";
 import { Layout } from "../components/layout";
 import { useEvents } from "../hooks/use-events";
-import { EventURL, YouTubeThumbnailURL } from "../routes";
+import { eventUrl, withHost, youTubeThumbnailUrl } from "../routes";
 import Head from "../components/head";
 import { Color } from "../constants";
 
@@ -18,7 +18,7 @@ const EventsPage = () => {
       <Head
         title="Raini.dev | Events"
         description="All Raini.dev events happening worldwide and online, gathered in one place."
-        url="https://raini.dev/events"
+        url={withHost("/events")}
       />
       <Layout>
         <PageContainer>
@@ -27,8 +27,8 @@ const EventsPage = () => {
             {events.map(event => (
               <Card
                 key={event.slug}
-                url={EventURL(event.slug)}
-                imageSrc={YouTubeThumbnailURL(event.videoId)}
+                url={eventUrl(event.slug)}
+                imageSrc={youTubeThumbnailUrl(event.videoId)}
                 imageAlt={event.title}
                 title={event.title}
               >
@@ -40,7 +40,7 @@ const EventsPage = () => {
                 <p>{event.excerpt}</p>
 
                 <CardFooter>
-                  <Link to={EventURL(event.slug)}>
+                  <Link to={eventUrl(event.slug)}>
                     <Button>See More &rarr;</Button>
                   </Link>
                 </CardFooter>

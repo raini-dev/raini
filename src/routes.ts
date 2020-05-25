@@ -4,12 +4,14 @@ export enum Route {
   EVENTS = "/events",
 }
 
-export const EventURL = (slug: string) => `/events/${slug}`;
-export const DocURL = (slug: string) => `/docs/${slug}`;
+export const eventUrl = (slug: string) => `/events/${slug}`;
+export const docUrl = (slug: string) => `/docs/${slug}`;
+export const withHost = (route: string) =>
+  `https://raini.dev${route.startsWith("/") ? route : `/${route}`}`;
 
-export const YouTubeEmbedURL = (videoId: string) => `https://youtube.com/embed/${videoId}`;
+export const youTubeEmbedUrl = (videoId: string) => `https://youtube.com/embed/${videoId}`;
 
-export const YouTubeThumbnailURL = (videoId: string) =>
+export const youTubeThumbnailUrl = (videoId: string) =>
   `https://i3.ytimg.com/vi/${videoId}/maxresdefault.jpg`;
 
 export enum ExternalRoute {

@@ -16,6 +16,8 @@ export const useFixedImages = (): IFixedImages => {
             src
             srcSet
             base64
+            width
+            height
             tracedSVG
             srcWebp
             srcSetWebp
@@ -28,7 +30,7 @@ export const useFixedImages = (): IFixedImages => {
   return Object.keys(images).reduce(
     (acc, key) => ({
       ...acc,
-      [key]: (images as any)[key].sharp.fluid,
+      [key]: (images as any)[key].sharp.fixed,
     }),
     {} as IFixedImages,
   );

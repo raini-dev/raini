@@ -8,10 +8,11 @@ import { PageContainer } from "../components/containers";
 import { Label, LabelsList } from "../components/label";
 import { Layout } from "../components/layout";
 import { Color } from "../constants";
-import { EventURL, Route, YouTubeEmbedURL, YouTubeThumbnailURL } from "../routes";
+import { eventUrl, Route, withHost, youTubeEmbedUrl, youTubeThumbnailUrl } from "../routes";
 import { EventModel } from "../models/event";
 import { Mdx } from "../../graphql-types";
 import Head from "../components/head";
+import { Id } from "../utils";
 
 export const query = graphql`
   query EventQuery($slug: String!) {
@@ -57,6 +58,11 @@ const YouTube = styled.iframe`
   width: 100%;
 `;
 
+const SmallNote = styled.p`
+  font-size: 0.75rem;
+  color: ${Color.DARK_GRAY};
+`;
+
 interface IEventTemplateProps {
   data: {
     event: Partial<Mdx>;
@@ -65,20 +71,22 @@ interface IEventTemplateProps {
 
 const EventTemplate: FC<IEventTemplateProps> = ({ data }) => {
   const event = EventModel.of(data.event);
+  const url = Id(event.slug).map(eventUrl).fold(withHost);
 
   return (
     <>
       <Head
         title={event.title}
         description={event.excerpt}
+        url={url}
+        author={event.authors.join(", ")}
         image={
           {
-            src: YouTubeThumbnailURL(event.videoId),
+            src: youTubeThumbnailUrl(event.videoId),
             width: 1219,
             height: 685,
           } as any
         }
-        url={`https://raini.dev/${EventURL(event.slug)}`}
         scripts={[
           {
             type: "text/javascript",
@@ -91,14 +99,7 @@ const EventTemplate: FC<IEventTemplateProps> = ({ data }) => {
       <Layout>
         <PageContainer textAlign={"left"}>
           <h1>{event.title}</h1>
-          <p
-            css={css`
-              font-size: 0.75rem;
-              color: ${Color.DARK_GRAY};
-            `}
-          >
-            Authors: {event.authors.join(", ")}
-          </p>
+          <SmallNote>Authors: {event.authors.join(", ")}</SmallNote>
           <LabelsList>
             <Label color={Color.DARK_PINK}>{event.language}</Label>
             <Label color={Color.LIGHT_PINK}>{event.difficulty}</Label>
@@ -110,7 +111,7 @@ const EventTemplate: FC<IEventTemplateProps> = ({ data }) => {
           <YouTubeWrapper>
             <YouTube
               title={event.title}
-              src={YouTubeEmbedURL(event.videoId)}
+              src={youTubeEmbedUrl(event.videoId)}
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -118,7 +119,7 @@ const EventTemplate: FC<IEventTemplateProps> = ({ data }) => {
           </YouTubeWrapper>
           <Body>
             <AddToCalendar event={event} />
-            <MDXRenderer>{event.body ?? ""}</MDXRenderer>
+            <MDXRenderer>{event.body}</MDXRenderer>
           </Body>
           <Link to={Route.EVENTS}>&larr; Back to events</Link>
         </PageContainer>

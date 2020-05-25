@@ -3,7 +3,7 @@ import { Layout } from "../components/layout";
 import { useDocs } from "../hooks/use-docs";
 import { Card, CardFooter, CardList } from "../components/card";
 import { PageContainer } from "../components/containers";
-import { DocURL } from "../routes";
+import { docUrl, withHost } from "../routes";
 import { Link } from "gatsby";
 import { Button } from "../components/buttons";
 import { UnderConstructionEmoji } from "../components/emoji";
@@ -25,17 +25,17 @@ const DocsPage = () => {
       <Head
         title="Raini.dev | Docs"
         description="Find out how to participate in developing education with Raini.dev"
-        url="https://raini.dev/docs"
+        url={withHost("/docs")}
       />
       <Layout>
         <PageContainer>
           <h1>Documentation</h1>
           <CardList>
             {docs.map(doc => (
-              <Card key={doc.slug} title={doc.title} url={DocURL(doc.slug)}>
+              <Card key={doc.slug} title={doc.title} url={docUrl(doc.slug)}>
                 <p>{doc.excerpt}</p>
                 <CardFooter>
-                  <Link to={DocURL(doc.slug)}>
+                  <Link to={docUrl(doc.slug)}>
                     <Button>See more &rarr;</Button>
                   </Link>
                 </CardFooter>
