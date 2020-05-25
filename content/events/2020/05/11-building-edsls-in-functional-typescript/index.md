@@ -13,34 +13,33 @@ theory: intermediate
 practice: advanced
 ---
 
-Business logic could be expressed in a limited subset of host language, leading to correct by construction, robust, optimisable code. This process is known as building eDSL – embedded domain-specific languages – and interpreting them, and is a widely used practice in functional languages like Haskell, Scala, OCaml. Still, this topic is terra incognita for many JS/TS developers.
+Бизнес-логика может быть выражена с помощью ограниченного подмножества хостового языка, позволяя коду быть корректным на этапе написания, надежным, поддающимся оптимизации. Такой процесс называется построенеим eDSL — встраиваемых предметно-ориентированных языков — и их интерпретацией; этот процесс широко распространен в функциональных языках вроде Haskell, Scala, OCaml. Тем не менее, эта тема всё еще является терра инкогнита для многих JS/TS-разработчиков.
 
-During this workshop I will give an overview of two ways of building eDSLs in functional TypeScript using `fp-ts` library:
-
-1. Free Monads
+В ходе этого воркшопа я рассмотрю два способа построения eDSL на функциональном TypeScript с помощью библиотеки fp-ts:
+1. Free-монады
 2. Tagless Final
 
-We will compare those approaches and discuss their trade-offs.
+Мы сравним эти подходы и обсудим их компромиссы.
 
-You will get hands-on experience in describing a business domain in a way that allows separating the construction of business logic from its interpretation and execution.
+Вы получите практические навыки описания бизнес-домена таким образом, который позволяет отделить построение выражений вашей бизнес-логики от ее интерпретации и исполнения.
 
-## List of Requirements
+## Требования
 
-- A notebook with code editor OR browser with CodeSandbox.
-- Working Node.js 10+ environment.
-- Downloaded workshop template.
-- Understanding basic concepts of functional programming: immutability, totality, purity, function composition, least power principle, etc.
-- Understanding what a monad and a functor are.
-- Experience with `fp-ts` would be a great plus.
+- Ноутбук с редактором кода или браузер с CodeSandbox.
+- Работающее окружение Node.js 10+.
+- Загруженный шаблон воркшопа.
+- Понимание базовых концепций функционального программирования: иммутабельность, тотальность, чистота, композиция функций, принцип наименьшего знания, и т.п.
+- Понимание, что такое монада и функтор.
+- Большим плюсом будет опыт работы с библиотекой `fp-ts`.
 
-## Preparations for the workshop
+## Подготовка к воркшопу
 
-1. Clone the workshop repository to your local computer.
-2. Install all the dependencies using `npm ci`.
-3. Open the repository in editor of your choice and follow along with the explanations.
-4. If you stuck, feel free to use one of recovery points (see below) to catch-up.
+1. Клонируйте репозиторий воркшопа к себе на компьютер.
+2. Установите все зависимости с помощью `npm ci`.
+3. Откройте репозиторий в редакторе и следуйте объяснениям лектора.
+4. Если вы застряли, то можете использовать одну из точек восстановления (см. ниже).
 
-Recovery points are branches with implemented crucial for understaning the material checkpoints. Their names are:
+Точки восстановления это ветки, в которых реализованы важные для понимания материала вехи. Имена этих веток:
 
 - `01-free-api`
 - `02-free-example`
