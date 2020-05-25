@@ -3078,11 +3078,6 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 
-export type Unnamed_1_QueryVariables = {};
-
-
-export type Unnamed_1_Query = { logo?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluid_WithWebpFragment> }> }> };
-
 export type OgImageQueryVariables = {};
 
 
@@ -3107,19 +3102,19 @@ export type AllEventsQuery = { allMdx: { events: Array<(
 export type LandingPageImagesQueryVariables = {};
 
 
-export type LandingPageImagesQuery = { missionImage?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, featuresBgImage?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, heroBg?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, heroImage?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }> };
+export type LandingPageImagesQuery = { missionImage?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, featuresBgImage?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, heroBg?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, heroImage?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, whiteLogo?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }> };
 
 export type SiteMetadataQueryVariables = {};
 
 
 export type SiteMetadataQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title' | 'author' | 'siteUrl' | 'description'>> }> };
 
-export type Unnamed_2_QueryVariables = {
+export type Unnamed_1_QueryVariables = {
   slug: Scalars['String'];
 };
 
 
-export type Unnamed_2_Query = { doc?: Maybe<(
+export type Unnamed_1_Query = { doc?: Maybe<(
     Pick<Mdx, 'excerpt' | 'body'>
     & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'slug'>> }
   )> };

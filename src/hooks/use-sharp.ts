@@ -13,6 +13,7 @@ interface IStaticImages {
   featuresBgImage: IFluidObject;
   heroBg: IFluidObject;
   heroImage: IFluidObject;
+  whiteLogo: IFluidObject;
 }
 
 export const useSharp = (): IStaticImages => {
@@ -61,6 +62,20 @@ export const useSharp = (): IStaticImages => {
         }
       }
       heroImage: file(relativePath: { eq: "mobile-hero-people.png" }) {
+        sharp: childImageSharp {
+          fluid {
+            aspectRatio
+            src
+            srcSet
+            sizes
+            base64
+            tracedSVG
+            srcWebp
+            srcSetWebp
+          }
+        }
+      }
+      whiteLogo: file(relativePath: { eq: "logo-white.png" }) {
         sharp: childImageSharp {
           fluid {
             aspectRatio
