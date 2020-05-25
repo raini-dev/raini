@@ -1,20 +1,20 @@
 {
-  "name": "raini.dev",
+  "name": "@raini/raini.dev",
   "private": true,
-  "description": "Raini.dev is a place where developers, designers, analysts, testers and managers share their experience.",
+  "description": "Raini.dev is an open sourced online learning and teaching space. Learn programming, marketing, data science and more. Empowered by professionals from all over the world.",
   "version": "0.0.0-dev",
   "license": "MPL-2.0",
   "scripts": {
     "build": "gatsby build",
+    "clean": "gatsby clean",
+    "serve": "gatsby serve",
     "develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "format": "prettier --write **/*.md src/**/*.{ts,tsx}",
     "start": "npm run develop",
-    "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "analyze": "cross-env ANALYZE_BUNDLE_SIZE=true gatsby build",
     "lighthouse": "lighthouse http://localhost:9000 --output-path=./lighthouse.html",
-    "lint": "eslint src/",
-    "clean": "gatsby clean"
+    "lint": "eslint src/"
   },
   "dependencies": {
     "@deckdeckgo/highlight-code": "^1.1.0",
@@ -68,7 +68,6 @@
     "eslint-plugin-react": "^7.20.0",
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
     "lighthouse": "^6.0.0",
-    "loader-utils": "^2.0.0",
     "prettier": "^2.0.5",
     "typescript": "^3.9.3"
   },
@@ -76,5 +75,7 @@
     "type": "git",
     "url": "https://github.com/raini-dev/raini"
   },
-  "browserslist": "last 2 versions"
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
