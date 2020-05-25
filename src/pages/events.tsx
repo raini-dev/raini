@@ -41,7 +41,7 @@ const EventsPage = () => {
 
                 <CardFooter>
                   <Link to={EventURL(event.slug)}>
-                    <Button>Learn More &rarr;</Button>
+                    <Button>See More &rarr;</Button>
                   </Link>
                 </CardFooter>
               </Card>

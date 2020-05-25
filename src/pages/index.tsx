@@ -109,7 +109,7 @@ const LandingPage = () => {
           <h1>Raini.dev</h1>
           <p>{description}</p>
           <Link to={Route.DOCS}>
-            <Button type="button">Learn More</Button>
+            <Button type="button">See More</Button>
           </Link>
         </HeroCTA>
       </BgImage>
@@ -163,7 +163,7 @@ const LandingPage = () => {
                 professionals and accessible to everyone.
               </Mission>
               <Link to={Route.DOCS}>
-                <Button type="button">Learn More</Button>
+                <Button type="button">See More</Button>
               </Link>
             </MissionTextWrapper>
           </MissionContainer>
