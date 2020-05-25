@@ -11,7 +11,7 @@ interface IMainProps {
 }
 
 const Main = styled.main<IMainProps>`
-  padding: 6rem 0 3rem;
+  padding-bottom: 3rem;
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;

@@ -28,7 +28,7 @@ const DocsPage = () => {
         url="https://raini.dev/docs"
       />
       <Layout>
-        <PageContainer alignItems="center" justifyContent="space-between">
+        <PageContainer>
           <h1>Documentation</h1>
           <CardList>
             {docs.map(doc => (

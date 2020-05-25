@@ -24,7 +24,7 @@ export const Container = styled.div<IContainerProps>`
 export const PageContainer = styled(Container)`
   justify-content: center;
   max-width: 1024px;
-  padding: 0 1rem;
+  padding: 6rem 1rem 0;
 
   & > h1,
   h2,
