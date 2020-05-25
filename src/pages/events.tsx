@@ -36,7 +36,7 @@ const PageMeta = () => (
   />
 );
 
-const Events = () => {
+const EventsPage = () => {
   const events = useEvents();
 
   return (
@@ -46,25 +46,22 @@ const Events = () => {
         <h1>Events</h1>
         <Container>
           {events.map((event, i) => (
-            <Card key={event?.frontmatter?.slug ?? i}>
-              <Link to={EventURL(event?.frontmatter?.slug ?? "")}>
-                <Image
-                  src={YouTubeThumbnailURL(event?.frontmatter?.videoId ?? "")}
-                  alt={event?.frontmatter?.title}
-                />
+            <Card key={event.slug}>
+              <Link to={EventURL(event.slug)}>
+                <Image src={YouTubeThumbnailURL(event.videoId)} alt={event.title} />
               </Link>
               <CardContents>
-                <Link to={EventURL(event?.frontmatter?.slug ?? "")}>
-                  <h3>{event?.frontmatter?.title}</h3>
+                <Link to={EventURL(event.slug)}>
+                  <h3>{event.title}</h3>
                 </Link>
 
                 <p>{event?.excerpt}</p>
 
                 <EventInfo>
-                  <Link to={EventURL(event?.frontmatter?.slug ?? "")}>
+                  <Link to={EventURL(event.slug)}>
                     <Button>See more &rarr;</Button>
                   </Link>
-                  <Label>{event?.frontmatter?.language}</Label>
+                  <Label>{event.language}</Label>
                 </EventInfo>
               </CardContents>
             </Card>
@@ -75,4 +72,4 @@ const Events = () => {
   );
 };
 
-export default Events;
+export default EventsPage;

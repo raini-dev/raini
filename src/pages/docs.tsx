@@ -17,8 +17,8 @@ const PageMeta = () => (
   />
 );
 
-const Contributing = () => {
-  const docs = useDocs() || [];
+const DocsPage = () => {
+  const docs = useDocs();
 
   if (!docs.length) {
     return (
@@ -34,14 +34,14 @@ const Contributing = () => {
       <PageContainer alignItems="center" justifyContent="space-between">
         <h1>Documentation</h1>
         <Container alignItems="unset">
-          {docs.map((doc, i) => (
-            <Card key={doc.frontmatter?.slug ?? i}>
+          {docs.map(doc => (
+            <Card key={doc.slug}>
               <CardContents>
-                <Link to={DocURL(doc.frontmatter?.slug ?? "")}>
-                  <h3>{doc.frontmatter?.title}</h3>
+                <Link to={DocURL(doc.slug)}>
+                  <h3>{doc.title}</h3>
                 </Link>
                 <p>{doc.excerpt}</p>
-                <Link to={DocURL(doc.frontmatter?.slug ?? "")}>
+                <Link to={DocURL(doc.slug)}>
                   <Button>See more &rarr;</Button>
                 </Link>
               </CardContents>
@@ -53,4 +53,4 @@ const Contributing = () => {
   );
 };
 
-export default Contributing;
+export default DocsPage;

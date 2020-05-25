@@ -10,10 +10,11 @@ import { Label } from "../components/label";
 import { Layout } from "../components/layout";
 import { Color, DifficultyColor } from "../constants";
 import { EventURL, Route, YouTubeEmbedURL } from "../routes";
-import { IEvent } from "../types/event";
+import { EventModel, IEvent } from "../models/event";
+import { Mdx } from "../../graphql-types";
 
 export const query = graphql`
-  query($slug: String!) {
+  query EventQuery($slug: String!) {
     event: mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
@@ -103,10 +104,10 @@ interface IPageMetaProps {
 
 const PageMeta: FC<IPageMetaProps> = ({ event }) => (
   <HelmetWrapper
-    title={`Raini.dev | ${event.frontmatter.title}`}
+    title={`Raini.dev | ${event.title}`}
     description={event.excerpt ?? ""}
-    url={`https://raini.dev${EventURL(event.frontmatter.slug)}`}
-    imageUrl={YouTubeEmbedURL(event.frontmatter.videoId)}
+    url={`https://raini.dev${EventURL(event.slug)}`}
+    imageUrl={YouTubeEmbedURL(event.videoId)}
   >
     {/* <!-- AddEvent script --> */}
     <script
@@ -114,72 +115,76 @@ const PageMeta: FC<IPageMetaProps> = ({ event }) => (
       src="https://addevent.com/libs/atc/1.6.1/atc.min.js"
       async
       defer
-    ></script>
+    />
   </HelmetWrapper>
 );
 
 interface IEventTemplateProps {
   data: {
-    event: IEvent;
+    event: Partial<Mdx>;
   };
 }
 
-const EventTemplate: FC<IEventTemplateProps> = ({ data: { event } }) => (
-  <Layout>
-    <PageMeta event={event} />
-    <PageContainer direction="column" alignItems="flex-start">
-      <h1>{event.frontmatter.title}</h1>
-      <p
-        css={css`
-          font-size: 0.75rem;
-          color: ${Color.DARK_GRAY};
-        `}
-      >
-        Authors: {event.frontmatter.authors}
-      </p>
-      <MetaWrapper>
-        <TagsWrapper>
-          {((event.frontmatter.tags as unknown) as string).split(", ").map((t: string) => (
-            <Label key={t}>{t}</Label>
-          ))}
-        </TagsWrapper>
-        <Label>{event.frontmatter.language}</Label>
-      </MetaWrapper>
+const EventTemplate: FC<IEventTemplateProps> = ({ data }) => {
+  const event = EventModel.of(data.event);
 
-      <YouTubeLimiter>
-        <YouTubeWrapper>
-          <YouTube
-            title={event.frontmatter.title}
-            src={YouTubeEmbedURL(event.frontmatter.videoId)}
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </YouTubeWrapper>
-      </YouTubeLimiter>
-      <Body>
-        <TagsWrapper
+  return (
+    <Layout>
+      <PageMeta event={event} />
+      <PageContainer direction="column" alignItems="flex-start">
+        <h1>{event.title}</h1>
+        <p
           css={css`
-            align-items: center;
-            margin-bottom: 3rem;
-            justify-content: space-between;
+            font-size: 0.75rem;
+            color: ${Color.DARK_GRAY};
           `}
         >
-          <div
+          Authors: {event.authors.join(", ")}
+        </p>
+        <MetaWrapper>
+          <TagsWrapper>
+            {event.tags.map((t: string) => (
+              <Label key={t}>{t}</Label>
+            ))}
+          </TagsWrapper>
+          <Label>{event.language}</Label>
+        </MetaWrapper>
+
+        <YouTubeLimiter>
+          <YouTubeWrapper>
+            <YouTube
+              title={event.title}
+              src={YouTubeEmbedURL(event.videoId)}
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </YouTubeWrapper>
+        </YouTubeLimiter>
+        <Body>
+          <TagsWrapper
             css={css`
-              display: flex;
+              align-items: center;
+              margin-bottom: 3rem;
+              justify-content: space-between;
             `}
           >
-            <Difficulty type="theory" level={event.frontmatter.theory} />
-            <Difficulty type="practice" level={event.frontmatter.practice} />
-          </div>
-          <AddToCalendar event={event} />
-        </TagsWrapper>
-        <MDXRenderer>{event.body ?? ""}</MDXRenderer>
-      </Body>
-      <Link to={Route.EVENTS}>&larr; Back to all events</Link>
-    </PageContainer>
-  </Layout>
-);
+            <div
+              css={css`
+                display: flex;
+              `}
+            >
+              <Difficulty type="theory" level={event.theory} />
+              <Difficulty type="practice" level={event.practice} />
+            </div>
+            <AddToCalendar event={event} />
+          </TagsWrapper>
+          <MDXRenderer>{event.body ?? ""}</MDXRenderer>
+        </Body>
+        <Link to={Route.EVENTS}>&larr; Back to all events</Link>
+      </PageContainer>
+    </Layout>
+  );
+};
 
 export default EventTemplate;

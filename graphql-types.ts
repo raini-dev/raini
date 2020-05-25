@@ -3164,12 +3164,12 @@ export type Unnamed_2_Query = { doc?: Maybe<(
     & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'slug'>> }
   )> };
 
-export type Unnamed_3_QueryVariables = {
+export type EventQueryQueryVariables = {
   slug: Scalars['String'];
 };
 
 
-export type Unnamed_3_Query = { event?: Maybe<(
+export type EventQueryQuery = { event?: Maybe<(
     Pick<Mdx, 'excerpt' | 'body'>
     & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'authors' | 'tags' | 'slug' | 'videoId' | 'language' | 'start' | 'end' | 'timezone' | 'location' | 'theory' | 'practice'>> }
   )> };

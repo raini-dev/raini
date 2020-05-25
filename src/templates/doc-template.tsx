@@ -5,6 +5,8 @@ import { Layout } from "../components/layout";
 import { DocURL, Route } from "../routes";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { PageContainer } from "../components/containers";
+import { DocModel, IDoc } from "../models/doc";
+import { Mdx } from "../../graphql-types";
 
 export const query = graphql`
   query($slug: String!) {
@@ -20,41 +22,31 @@ export const query = graphql`
 `;
 
 interface IPageMetaProps {
-  doc: {
-    frontmatter: {
-      title: string;
-      slug: string;
-    };
-  };
+  doc: IDoc;
 }
 
 const PageMeta: FC<IPageMetaProps> = ({ doc }) => (
   <HelmetWrapper
     title="Raini.dev | How to become Raini.dev Teacher"
     description="Find out how to participate in developing education with Raini.dev."
-    url={DocURL(doc.frontmatter.slug)}
+    url={DocURL(doc.slug)}
   />
 );
 
-interface IDocTempateProps {
+interface IDocTemplateProps {
   data: {
-    doc: {
-      frontmatter: {
-        title: string;
-        slug: string;
-      };
-      excerpt: string;
-      body: string;
-    };
+    doc: Partial<Mdx>;
   };
 }
 
-const DocTemplate: FC<IDocTempateProps> = ({ data: { doc } }) => {
+const DocTemplate: FC<IDocTemplateProps> = ({ data }) => {
+  const doc = DocModel.of(data.doc);
+
   return (
     <Layout>
       <PageMeta doc={doc} />
       <PageContainer>
-        <h1>{doc.frontmatter.title}</h1>
+        <h1>{doc.title}</h1>
         <MDXRenderer>{doc.body ?? ""}</MDXRenderer>
         <Link to={Route.DOCS}>&larr; Back to all events</Link>
       </PageContainer>

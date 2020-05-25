@@ -1,8 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { AllDocsQuery } from "../../graphql-types";
+import { Mdx } from "../../graphql-types";
+import { DocModel } from "../models/doc";
 
 export const useDocs = () => {
-  const query: AllDocsQuery = useStaticQuery(graphql`
+  const query: { allMdx: { docs: Partial<Mdx>[] } } = useStaticQuery(graphql`
     query AllDocs {
       allMdx(
         filter: { fileAbsolutePath: { regex: "/content/docs/" } }
@@ -19,5 +20,5 @@ export const useDocs = () => {
     }
   `);
 
-  return query.allMdx.docs;
+  return DocModel.batch(query.allMdx.docs);
 };
