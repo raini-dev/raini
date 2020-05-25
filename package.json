@@ -14,7 +14,8 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "analyze": "cross-env ANALYZE_BUNDLE_SIZE=true gatsby build",
     "lighthouse": "lighthouse http://localhost:9000 --output-path=./lighthouse.html",
-    "lint": "eslint src/"
+    "lint:eslint": "eslint src/",
+    "lint:prettier:md": "prettier **/*.md --list-different"
   },
   "dependencies": {
     "@deckdeckgo/highlight-code": "^1.1.0",

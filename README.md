@@ -1,9 +1,8 @@
 # Raini
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e4b681e6-2727-4575-89fb-826b0f165e73/deploy-status)](https://app.netlify.com/sites/raini/deploys)
 ![lint](https://github.com/raini-dev/raini/workflows/lint/badge.svg)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-![version](https://img.shields.io/github/v/tag/raini-dev/raini?color=912e5c&label=version&logo=github)
-[![versioning: semantics](https://img.shields.io/badge/versioning-@priestine/semantics-912e5c.svg)](https://github.com/priestine/semantics)
 
 [![twitter: raini_dev](https://img.shields.io/twitter/follow/raini_dev?color=blue&label=raini_dev&logo=twitter&logoColor=white&style=flat)](https://twitter.com/raini_dev)
 [![slack: raini-dev](https://img.shields.io/badge/slack-raini--dev-7C2852?logo=slack)](https://raini-dev.slack.com)
