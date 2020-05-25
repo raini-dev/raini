@@ -16,14 +16,15 @@ deckgo-highlight-code {
 
 html,
 body {
-  font-family: Montserrat, -apple-system, BlinkMacSystemFont,
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Helvetica, Arial, sens-serif;
-  font-size: 15px;
-  font-weight: 200;
-  line-height: 1.4;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
   height: 100%;
-
-  /* Remove margin from the main div that Gatsby mounts to */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: ${Color.DARK_GRAY};
 
   h1,
   h2,
@@ -31,7 +32,8 @@ body {
   h4,
   h5,
   h6 {
-    font-weight: 400;
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sens-serif;
     margin: 0.875rem 0;
 
     > a {
