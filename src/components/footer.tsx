@@ -5,7 +5,7 @@ import React, { FC } from "react";
 import { Color } from "../constants";
 import { ExternalRoute, Route } from "../routes";
 import { OutboundLink } from "gatsby-plugin-google-analytics";
-import { useSharp } from "../hooks/use-sharp";
+import { useFluidImages } from "../hooks/use-fluid-images";
 
 const Logo = styled(Link)`
   width: 121px;
@@ -46,7 +46,7 @@ const SocialIconsContainer = styled.div`
 `;
 
 const Footer: FC = () => {
-  const { whiteLogo } = useSharp();
+  const { whiteLogo } = useFluidImages();
 
   return (
     <StyledFooter>

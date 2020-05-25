@@ -2,10 +2,10 @@ import React from "react";
 import { BgSection } from "../components/sections";
 import { Layout } from "../components/layout";
 import Head from "../components/head";
-import { useSharp } from "../hooks/use-sharp";
+import { useFluidImages } from "../hooks/use-fluid-images";
 
 const NotFound = () => {
-  const { featuresBgImage } = useSharp();
+  const { featuresBgImage } = useFluidImages();
 
   return (
     <>

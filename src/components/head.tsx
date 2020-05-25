@@ -1,20 +1,8 @@
 import React, { FC } from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import { Helmet, LinkProps, MetaProps } from "react-helmet";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
-import { GatsbyImageSharpFixedFragment } from "../../graphql-types";
-
-export const query = graphql`
-  query OgImage {
-    image: file(relativePath: { eq: "og-source.png" }) {
-      sharp: childImageSharp {
-        fixed(width: 1200, height: 1200, cropFocus: CENTER) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`;
+import { useFixedImages } from "../hooks/use-fixed-images";
+import { IFixedObject } from "gatsby-background-image";
 
 interface ISeoProps {
   description?: string;
@@ -23,7 +11,7 @@ interface ISeoProps {
   author?: string;
   url?: string;
   meta?: MetaProps[];
-  image?: GatsbyImageSharpFixedFragment;
+  image?: IFixedObject;
   scripts?: any[];
   links?: LinkProps[];
 }
@@ -39,7 +27,7 @@ const Head: FC<ISeoProps> = ({
   scripts = [],
   links = [],
 }) => {
-  const defaultImage = useStaticQuery(query).image.sharp.fixed;
+  const { ogImage1200x1200: defaultImage } = useFixedImages();
   const {
     author: defaultAuthor,
     title: defaultTitle,
@@ -112,11 +100,11 @@ const Head: FC<ISeoProps> = ({
         },
         {
           property: "og:image:width",
-          content: metaImage.width,
+          content: String(metaImage.width),
         },
         {
           property: "og:image:height",
-          content: metaImage.height,
+          content: String(metaImage.height),
         },
         {
           name: "twitter:card",

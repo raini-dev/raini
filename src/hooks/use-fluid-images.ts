@@ -1,14 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { ImageSharpFluid, StaticImagesQuery } from "../../graphql-types";
+import { StaticImagesQuery } from "../../graphql-types";
+import { IFluidObject } from "../models/static-image";
 
-interface IFluidObject extends ImageSharpFluid {
-  base64?: string;
-  tracedSVG?: string;
-  srcWebp?: string;
-  srcSetWebp?: string;
-}
-
-interface IStaticImages {
+interface IFluidImages {
   missionImage: IFluidObject;
   featuresBgImage: IFluidObject;
   heroBg: IFluidObject;
@@ -16,9 +10,9 @@ interface IStaticImages {
   whiteLogo: IFluidObject;
 }
 
-export const useSharp = (): IStaticImages => {
+export const useFluidImages = (): IFluidImages => {
   const images: StaticImagesQuery = useStaticQuery(graphql`
-    query StaticImages {
+    query FluidImages {
       missionImage: file(relativePath: { eq: "mobile-mission-image.png" }) {
         sharp: childImageSharp {
           fluid {
@@ -97,6 +91,6 @@ export const useSharp = (): IStaticImages => {
       ...acc,
       [key]: (images as any)[key].sharp.fluid,
     }),
-    {} as IStaticImages,
+    {} as IFluidImages,
   );
 };

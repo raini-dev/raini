@@ -11,7 +11,7 @@ import { BgSection, Section } from "../components/sections";
 import { Route } from "../routes";
 import Head from "../components/head";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
-import { useSharp } from "../hooks/use-sharp";
+import { useFluidImages } from "../hooks/use-fluid-images";
 
 const BgImage = styled(BackgroundImage)`
   background-position: center;
@@ -93,7 +93,7 @@ const MissionTextWrapper = styled.div`
 const LandingPage = () => {
   const { description } = useSiteMetadata();
 
-  const { missionImage, featuresBgImage, heroBg, heroImage } = useSharp();
+  const { missionImage, featuresBgImage, heroBg, heroImage } = useFluidImages();
 
   return (
     <>
