@@ -40,21 +40,10 @@ const Body = styled.section`
   flex-direction: column;
 `;
 
-const YouTubeLimiter = styled.div`
-  width: 320px;
-
-  @media screen and (min-width: 662px) {
-    width: 500px;
-  }
-
-  @media screen and (min-width: 1281px) {
-    width: 994px;
-  }
-`;
-
 const YouTubeWrapper = styled.div`
   padding-bottom: 56.25%;
   overflow: hidden;
+  width: 100%;
   max-width: 100%;
   height: 0;
   position: relative;
@@ -118,17 +107,15 @@ const EventTemplate: FC<IEventTemplateProps> = ({ data }) => {
             ))}
           </LabelsList>
 
-          <YouTubeLimiter>
-            <YouTubeWrapper>
-              <YouTube
-                title={event.title}
-                src={YouTubeEmbedURL(event.videoId)}
-                frameBorder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </YouTubeWrapper>
-          </YouTubeLimiter>
+          <YouTubeWrapper>
+            <YouTube
+              title={event.title}
+              src={YouTubeEmbedURL(event.videoId)}
+              frameBorder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </YouTubeWrapper>
           <Body>
             <AddToCalendar event={event} />
             <MDXRenderer>{event.body ?? ""}</MDXRenderer>
