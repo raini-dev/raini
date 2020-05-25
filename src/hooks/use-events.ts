@@ -17,6 +17,7 @@ export const useEvents = () => {
             tags
             authors
             videoId
+            difficulty
           }
           excerpt
         }

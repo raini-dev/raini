@@ -3093,7 +3093,7 @@ export type AllEventsQueryVariables = {};
 
 export type AllEventsQuery = { allMdx: { events: Array<(
       Pick<Mdx, 'excerpt'>
-      & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'slug' | 'language' | 'tags' | 'authors' | 'videoId'>> }
+      & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'slug' | 'language' | 'tags' | 'authors' | 'videoId' | 'difficulty'>> }
     )> } };
 
 export type SiteMetadataQueryVariables = {};

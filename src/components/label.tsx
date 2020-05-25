@@ -7,7 +7,8 @@ export const LabelsList = styled.div`
   justify-content: flex-start;
 
   > div {
-    margin: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
   }
 `;
 

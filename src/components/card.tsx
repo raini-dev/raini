@@ -63,6 +63,7 @@ export const CardContents = styled.div`
   }
 
   p {
+    margin: 0.5rem 0;
     text-wrap: normal;
   }
 `;
@@ -111,4 +112,5 @@ export const CardFooter = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-shrink: 0;
+  flex-wrap: wrap;
 `;

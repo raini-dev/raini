@@ -3,11 +3,12 @@ import React from "react";
 import { Button } from "../components/buttons";
 import { Card, CardFooter, CardList } from "../components/card";
 import { PageContainer } from "../components/containers";
-import { Label } from "../components/label";
+import { Label, LabelsList } from "../components/label";
 import { Layout } from "../components/layout";
 import { useEvents } from "../hooks/use-events";
 import { EventURL, YouTubeThumbnailURL } from "../routes";
 import Head from "../components/head";
+import { Color } from "../constants";
 
 const EventsPage = () => {
   const events = useEvents();
@@ -31,13 +32,17 @@ const EventsPage = () => {
                 imageAlt={event.title}
                 title={event.title}
               >
-                <p css={{ flexGrow: 1 }}>{event.excerpt}</p>
+                <LabelsList>
+                  <Label color={Color.DARK_PINK}>{event.language}</Label>
+                  <Label color={Color.LIGHT_PINK}>{event.difficulty}</Label>
+                </LabelsList>
+
+                <p>{event.excerpt}</p>
 
                 <CardFooter>
                   <Link to={EventURL(event.slug)}>
                     <Button>Learn More &rarr;</Button>
                   </Link>
-                  <Label>{event.language}</Label>
                 </CardFooter>
               </Card>
             ))}
