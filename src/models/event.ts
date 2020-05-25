@@ -20,8 +20,7 @@ export interface IEvent {
   end: string;
   timezone: string;
   location: string;
-  theory: TDifficulty;
-  practice: TDifficulty;
+  difficulty: TDifficulty;
   body: string;
   excerpt: string;
 }
@@ -40,10 +39,8 @@ export const EventModel = {
       .pipeExtend(maybeStringToString<IEvent>("location", "online"))
       .pipeExtend(maybeStringToString<IEvent>("body"))
       .pipeExtend(maybeStringToString<IEvent>("excerpt"))
-      .pipeExtend(maybeStringToString<IEvent>("theory"))
-      .pipeExtend(stringToDifficulty<IEvent>("theory"))
-      .pipeExtend(maybeStringToString<IEvent>("practice"))
-      .pipeExtend(stringToDifficulty<IEvent>("practice"))
+      .pipeExtend(maybeStringToString<IEvent>("difficulty"))
+      .pipeExtend(stringToDifficulty<IEvent>("difficulty"))
       .process(() => flattenFrontMatter<IEvent>(event)),
   batch: (events: Partial<Mdx>[] = []): IEvent[] => events.map(EventModel.of),
 };

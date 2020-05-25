@@ -9,8 +9,7 @@ start: 2020-05-10 12:00 PM
 end: 2020-05-10 4:00 PM
 timezone: Moscow
 location: Online
-theory: elementary
-practice: intermediate
+difficulty: intermediate
 ---
 
 Learn how to share the updates of your software with collaborators, users and other stakeholders in a clear and understandable way.

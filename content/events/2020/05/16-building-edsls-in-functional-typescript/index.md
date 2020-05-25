@@ -9,8 +9,7 @@ start: 2020-05-16 11:00 AM
 end: 2020-05-16 3:00 PM
 timezone: Moscow
 location: Online
-theory: intermediate
-practice: advanced
+difficulty: advanced
 ---
 
 Business logic could be expressed in a limited subset of host language, leading to correct by construction, robust, optimisable code. This process is known as building eDSL – embedded domain-specific languages – and interpreting them, and is a widely used practice in functional languages like Haskell, Scala, OCaml. Still, this topic is terra incognita for many JS/TS developers.

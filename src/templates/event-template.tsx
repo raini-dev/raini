@@ -27,8 +27,7 @@ export const query = graphql`
         end
         timezone
         location
-        theory
-        practice
+        difficulty
       }
       excerpt
       body
@@ -113,7 +112,7 @@ const EventTemplate: FC<IEventTemplateProps> = ({ data }) => {
           </p>
           <LabelsList>
             <Label color={Color.DARK_PINK}>{event.language}</Label>
-            <Label color={Color.LIGHT_PINK}>{event.theory}</Label>
+            <Label color={Color.LIGHT_PINK}>{event.difficulty}</Label>
             {event.tags.map(t => (
               <Label key={t}>{t}</Label>
             ))}
