@@ -3099,10 +3099,10 @@ export type AllEventsQuery = { allMdx: { events: Array<(
       & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'slug' | 'language' | 'tags' | 'authors' | 'videoId' | 'difficulty'>> }
     )> } };
 
-export type LandingPageImagesQueryVariables = {};
+export type StaticImagesQueryVariables = {};
 
 
-export type LandingPageImagesQuery = { missionImage?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, featuresBgImage?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, heroBg?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, heroImage?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, whiteLogo?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }> };
+export type StaticImagesQuery = { missionImage?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, featuresBgImage?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, heroBg?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, heroImage?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }>, whiteLogo?: Maybe<{ sharp?: Maybe<{ fluid?: Maybe<Pick<ImageSharpFluid, 'aspectRatio' | 'src' | 'srcSet' | 'sizes' | 'base64' | 'tracedSVG' | 'srcWebp' | 'srcSetWebp'>> }> }> };
 
 export type SiteMetadataQueryVariables = {};
 

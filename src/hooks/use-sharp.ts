@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { ImageSharpFluid, LandingPageImagesQuery } from "../../graphql-types";
+import { ImageSharpFluid, StaticImagesQuery } from "../../graphql-types";
 
 interface IFluidObject extends ImageSharpFluid {
   base64?: string;
@@ -17,8 +17,8 @@ interface IStaticImages {
 }
 
 export const useSharp = (): IStaticImages => {
-  const images: LandingPageImagesQuery = useStaticQuery(graphql`
-    query LandingPageImages {
+  const images: StaticImagesQuery = useStaticQuery(graphql`
+    query StaticImages {
       missionImage: file(relativePath: { eq: "mobile-mission-image.png" }) {
         sharp: childImageSharp {
           fluid {
