@@ -27,6 +27,10 @@ const BgImage = styled(BackgroundImage)`
   @media screen and (min-width: 662px) {
     flex-direction: row-reverse;
   }
+
+  @media screen and (min-width: 1280px) {
+    padding: 10rem 10rem 12rem;
+  }
 `;
 
 const HeroImage = styled(Image)`
