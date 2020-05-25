@@ -6,7 +6,7 @@ interface IAddToCalendarProps {
 }
 
 export const AddToCalendar: FC<IAddToCalendarProps> = ({ event }) => (
-  <div title="Add to Calendar" className="addeventatc" css={{ margin: "1rem 0" }}>
+  <div title="Add to Calendar" className="addeventatc">
     Add to Calendar
     <span className="start">{event.start}</span>
     <span className="end">{event.end}</span>

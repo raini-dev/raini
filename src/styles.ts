@@ -98,4 +98,12 @@ blockquote::before {
 blockquote p {
   display: inline;
 }
+
+.addeventatc {
+  margin: 1rem 0;
+  
+  @media screen and (min-width: 662px) {
+    align-self: flex-end;
+  }
+}
 `;
