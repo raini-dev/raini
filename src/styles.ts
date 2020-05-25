@@ -10,6 +10,7 @@ export const GLOBAL_STYLES = `
 
 deckgo-highlight-code {
   margin-bottom: 2rem;
+  box-shadow: 0 0 15px ${Color.LIGHT_GRAY};
 }
 
 html,
