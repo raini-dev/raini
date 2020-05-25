@@ -117,7 +117,7 @@ const Burger: FC<IBurgerProps> = ({ setActive, isActive }) => (
 
 const Logo = () => (
   <Link to="/">
-    <img src="/logo.svg" height="40" alt="Raini.dev logo" />
+    <img css={{ verticalAlign: "bottom" }} src="/logo.svg" height="40" alt="Raini.dev logo" />
   </Link>
 );
 
