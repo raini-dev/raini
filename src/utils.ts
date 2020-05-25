@@ -33,12 +33,12 @@ export const stringToDifficulty = <T, K extends keyof T = keyof T>(key: K) => (c
 });
 
 export const flattenFrontMatter = <T>(ctx: Partial<Mdx>): T => {
-  const doc = {
+  const item = {
     ...ctx,
     ...ctx.frontmatter,
   };
 
-  delete doc.frontmatter;
+  delete item.frontmatter;
 
-  return (doc as unknown) as T;
+  return (item as unknown) as T;
 };
