@@ -9,11 +9,11 @@ export const isAdvanced = (x: string): boolean => x.toLowerCase() === "advanced"
 
 export const maybeStringToString = <T, K extends keyof T = keyof T>(
   key: K,
-  defaultValue?: T[K],
+  defaultValue: T[K] = "" as any,
 ) => (ctx: T) => ({
   [key]: Switch(ctx[key])
-    .case(isString, (x: any) => (x ? x : defaultValue ?? ""))
-    .default(() => "")(ctx[key]),
+    .case(isString, (x: any) => (x ? x : defaultValue))
+    .default(() => defaultValue)(ctx[key]),
 });
 
 export const maybeStringToArray = <T, K extends keyof T = keyof T>(key: K) => (ctx: T) => ({
