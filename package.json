@@ -14,7 +14,7 @@
     "analyze": "cross-env ANALYZE_BUNDLE_SIZE=true gatsby build",
     "lighthouse": "lighthouse http://localhost:9000 --output-path=./lighthouse.html",
     "lint": "eslint src/",
-    "reset-cache": "rm -rf .cache public"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "@deckdeckgo/highlight-code": "^1.1.0",
