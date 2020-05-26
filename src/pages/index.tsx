@@ -16,7 +16,7 @@ import { useFluidImages } from "../hooks/use-fluid-images";
 const BgImage = styled(BackgroundImage)`
   background-position: center;
   background-size: cover;
-  padding: 6rem 0;
+  padding: 6rem 0 0 0;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ const BgImage = styled(BackgroundImage)`
     flex-direction: row-reverse;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1281px) {
     padding: 10rem 10rem 12rem;
   }
 `;
@@ -49,11 +49,27 @@ const HeroCTA = styled.div`
 
   @media screen and (min-width: 662px) {
     width: 100%;
-    padding: 5rem;
+  }
+
+  > h1 {
+    font-size: 2rem;
   }
 
   > p {
     margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  @media screen and (min-width: 1281px) {
+    padding: 5rem;
+
+    > h1 {
+      font-size: 2.5rem;
+    }
+
+    > p {
+      font-size: 1.5rem;
+    }
   }
 `;
 
@@ -115,7 +131,7 @@ const LandingPage = () => {
       </BgImage>
       <Layout>
         <BgSection Tag="section" fluid={featuresBgImage}>
-          <PageContainer alignItems="center">
+          <PageContainer alignItems="center" padding="0">
             <h2>How we do it</h2>
             <CardList>
               <Card>
