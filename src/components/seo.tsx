@@ -144,6 +144,9 @@ const Seo: FC<ISeoProps> = ({
         content: { href: "https://raini.dev/cookie-policy" },
       });
     });
+
+    const cookieConsentBtn = document.querySelector(".wpcc-btn");
+    cookieConsentBtn?.setAttribute("role", "button");
   }, []);
 
   return (
