@@ -1,6 +1,17 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { FluidImagesQuery } from "../../graphql-types";
-import { IFluidObject } from "gatsby-background-image";
+
+interface IFluidObject {
+  aspectRatio: number;
+  src: string;
+  srcSet: string;
+  sizes: string;
+  base64?: string;
+  tracedSVG?: string;
+  srcWebp?: string;
+  srcSetWebp?: string;
+  media?: string;
+}
 
 interface IFluidImages {
   missionImage: IFluidObject;
