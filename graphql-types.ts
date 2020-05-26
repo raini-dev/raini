@@ -693,6 +693,7 @@ export type FileFieldsEnum =
   | 'internal___type'
   | 'childMdx___rawBody'
   | 'childMdx___fileAbsolutePath'
+  | 'childMdx___frontmatter___description'
   | 'childMdx___frontmatter___title'
   | 'childMdx___frontmatter___slug'
   | 'childMdx___frontmatter___authors'
@@ -821,6 +822,36 @@ export type FloatQueryOperatorInput = {
   lte?: Maybe<Scalars['Float']>;
   in?: Maybe<Array<Maybe<Scalars['Float']>>>;
   nin?: Maybe<Array<Maybe<Scalars['Float']>>>;
+};
+
+export type Frontmatter = {
+  description: Scalars['String'];
+  title?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  authors?: Maybe<Scalars['String']>;
+  videoId?: Maybe<Scalars['String']>;
+  language?: Maybe<Scalars['String']>;
+  tags?: Maybe<Scalars['String']>;
+  start?: Maybe<Scalars['String']>;
+  end?: Maybe<Scalars['String']>;
+  timezone?: Maybe<Scalars['String']>;
+  location?: Maybe<Scalars['String']>;
+  difficulty?: Maybe<Scalars['String']>;
+};
+
+export type FrontmatterFilterInput = {
+  description?: Maybe<StringQueryOperatorInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  authors?: Maybe<StringQueryOperatorInput>;
+  videoId?: Maybe<StringQueryOperatorInput>;
+  language?: Maybe<StringQueryOperatorInput>;
+  tags?: Maybe<StringQueryOperatorInput>;
+  start?: Maybe<StringQueryOperatorInput>;
+  end?: Maybe<StringQueryOperatorInput>;
+  timezone?: Maybe<StringQueryOperatorInput>;
+  location?: Maybe<StringQueryOperatorInput>;
+  difficulty?: Maybe<StringQueryOperatorInput>;
 };
 
 export type HeadingsMdx = 
@@ -1374,7 +1405,7 @@ export type JsonQueryOperatorInput = {
 export type Mdx = Node & {
   rawBody: Scalars['String'];
   fileAbsolutePath: Scalars['String'];
-  frontmatter?: Maybe<MdxFrontmatter>;
+  frontmatter?: Maybe<Frontmatter>;
   body: Scalars['String'];
   excerpt: Scalars['String'];
   headings?: Maybe<Array<Maybe<MdxHeadingMdx>>>;
@@ -1435,6 +1466,7 @@ export type MdxEdge = {
 export type MdxFieldsEnum = 
   | 'rawBody'
   | 'fileAbsolutePath'
+  | 'frontmatter___description'
   | 'frontmatter___title'
   | 'frontmatter___slug'
   | 'frontmatter___authors'
@@ -1548,7 +1580,7 @@ export type MdxFieldsEnum =
 export type MdxFilterInput = {
   rawBody?: Maybe<StringQueryOperatorInput>;
   fileAbsolutePath?: Maybe<StringQueryOperatorInput>;
-  frontmatter?: Maybe<MdxFrontmatterFilterInput>;
+  frontmatter?: Maybe<FrontmatterFilterInput>;
   body?: Maybe<StringQueryOperatorInput>;
   excerpt?: Maybe<StringQueryOperatorInput>;
   headings?: Maybe<MdxHeadingMdxFilterListInput>;
@@ -1565,30 +1597,6 @@ export type MdxFilterInput = {
 
 export type MdxFrontmatter = {
   title: Scalars['String'];
-  slug?: Maybe<Scalars['String']>;
-  authors?: Maybe<Scalars['String']>;
-  videoId?: Maybe<Scalars['String']>;
-  language?: Maybe<Scalars['String']>;
-  tags?: Maybe<Scalars['String']>;
-  start?: Maybe<Scalars['String']>;
-  end?: Maybe<Scalars['String']>;
-  timezone?: Maybe<Scalars['String']>;
-  location?: Maybe<Scalars['String']>;
-  difficulty?: Maybe<Scalars['String']>;
-};
-
-export type MdxFrontmatterFilterInput = {
-  title?: Maybe<StringQueryOperatorInput>;
-  slug?: Maybe<StringQueryOperatorInput>;
-  authors?: Maybe<StringQueryOperatorInput>;
-  videoId?: Maybe<StringQueryOperatorInput>;
-  language?: Maybe<StringQueryOperatorInput>;
-  tags?: Maybe<StringQueryOperatorInput>;
-  start?: Maybe<StringQueryOperatorInput>;
-  end?: Maybe<StringQueryOperatorInput>;
-  timezone?: Maybe<StringQueryOperatorInput>;
-  location?: Maybe<StringQueryOperatorInput>;
-  difficulty?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MdxGroupConnection = {
@@ -1874,7 +1882,7 @@ export type QueryAllImageSharpArgs = {
 export type QueryMdxArgs = {
   rawBody?: Maybe<StringQueryOperatorInput>;
   fileAbsolutePath?: Maybe<StringQueryOperatorInput>;
-  frontmatter?: Maybe<MdxFrontmatterFilterInput>;
+  frontmatter?: Maybe<FrontmatterFilterInput>;
   body?: Maybe<StringQueryOperatorInput>;
   excerpt?: Maybe<StringQueryOperatorInput>;
   headings?: Maybe<MdxHeadingMdxFilterListInput>;
@@ -3083,7 +3091,7 @@ export type AllDocsQueryVariables = {};
 
 export type AllDocsQuery = { allMdx: { docs: Array<(
       Pick<Mdx, 'excerpt'>
-      & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'slug'>> }
+      & { frontmatter?: Maybe<Pick<Frontmatter, 'title' | 'slug'>> }
     )> } };
 
 export type AllEventsQueryVariables = {};
@@ -3091,7 +3099,7 @@ export type AllEventsQueryVariables = {};
 
 export type AllEventsQuery = { allMdx: { events: Array<(
       Pick<Mdx, 'excerpt'>
-      & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'slug' | 'language' | 'tags' | 'authors' | 'videoId' | 'difficulty'>> }
+      & { frontmatter?: Maybe<Pick<Frontmatter, 'title' | 'slug' | 'language' | 'tags' | 'authors' | 'videoId' | 'difficulty'>> }
     )> } };
 
 export type FixedImagesQueryVariables = {};
@@ -3116,7 +3124,7 @@ export type Unnamed_1_QueryVariables = {
 
 export type Unnamed_1_Query = { doc?: Maybe<(
     Pick<Mdx, 'excerpt' | 'body'>
-    & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'slug'>> }
+    & { frontmatter?: Maybe<Pick<Frontmatter, 'title' | 'slug'>> }
   )> };
 
 export type EventQueryQueryVariables = {
@@ -3126,7 +3134,17 @@ export type EventQueryQueryVariables = {
 
 export type EventQueryQuery = { event?: Maybe<(
     Pick<Mdx, 'excerpt' | 'body'>
-    & { frontmatter?: Maybe<Pick<MdxFrontmatter, 'title' | 'authors' | 'tags' | 'slug' | 'videoId' | 'language' | 'start' | 'end' | 'timezone' | 'location' | 'difficulty'>> }
+    & { frontmatter?: Maybe<Pick<Frontmatter, 'title' | 'authors' | 'tags' | 'slug' | 'videoId' | 'language' | 'start' | 'end' | 'timezone' | 'location' | 'difficulty'>> }
+  )> };
+
+export type Unnamed_2_QueryVariables = {
+  slug: Scalars['String'];
+};
+
+
+export type Unnamed_2_Query = { page?: Maybe<(
+    Pick<Mdx, 'excerpt' | 'body'>
+    & { frontmatter?: Maybe<Pick<Frontmatter, 'slug' | 'title' | 'description'>> }
   )> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;

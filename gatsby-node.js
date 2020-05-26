@@ -15,6 +15,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
+      legal: allMdx(filter: { fileAbsolutePath: { regex: "/legal/" } }) {
+        nodes {
+          frontmatter {
+            slug
+          }
+        }
+      }
     }
   `);
 
@@ -24,6 +31,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const events = result.data.events.nodes;
   const docs = result.data.docs.nodes;
+  const legalDocs = result.data.legal.nodes;
 
   events.forEach(event => {
     actions.createPage({
@@ -46,4 +54,28 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     });
   });
+
+  legalDocs.forEach(doc => {
+    actions.createPage({
+      path: doc.frontmatter.slug,
+      matchPath: doc.frontmatter.slug,
+      component: require.resolve("./src/templates/other-mdx-template.tsx"),
+      context: {
+        slug: doc.frontmatter.slug,
+      },
+    });
+  });
+};
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type Mdx implements Node {
+      frontmatter: Frontmatter
+    }
+    type Frontmatter {
+      description: String!
+    }
+  `;
+  createTypes(typeDefs);
 };

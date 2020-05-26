@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { Helmet, LinkProps, MetaProps } from "react-helmet";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 import { useFixedImages } from "../hooks/use-fixed-images";
@@ -80,16 +80,30 @@ const Head: FC<ISeoProps> = ({
     },
     {
       rel: "stylesheet",
+      type: "text/css",
       href: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap",
     },
     {
       rel: "stylesheet",
+      type: "text/css",
       href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap",
     },
     {
       href: withHost("/hamburger.min.css"),
+      type: "text/css",
       media: "screen and (max-width:1280px)",
       rel: "stylesheet",
+    },
+    {
+      rel: "stylesheet",
+      type: "text/css",
+      href: "https://wpcc.io/lib/1.0.2/cookieconsent.min.css",
+    },
+  ];
+
+  const defaultScripts = [
+    {
+      src: "https://wpcc.io/lib/1.0.2/cookieconsent.min.js",
     },
   ];
 
@@ -112,6 +126,22 @@ const Head: FC<ISeoProps> = ({
     },
   ];
 
+  useEffect(() => {
+    window.addEventListener("load", () => {
+      (window as any).wpcc.init({
+        border: "thin",
+        corners: "small",
+        colors: {
+          popup: { background: "#ffffff", text: "#333333", border: "#cccccc" },
+          button: { background: "#aa6176", text: "#ffffff" },
+        },
+        position: "bottom-right",
+        padding: "small",
+        content: { href: "https://raini.dev/cookie-policy" },
+      });
+    });
+  }, []);
+
   return (
     <Helmet
       htmlAttributes={{
@@ -120,7 +150,7 @@ const Head: FC<ISeoProps> = ({
       title={pageTitle}
       meta={defaultMeta.concat(defaultImageMeta).concat(meta)}
       link={defaultLinks.concat(links)}
-      script={scripts}
+      script={defaultScripts.concat(scripts)}
     />
   );
 };

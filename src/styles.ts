@@ -106,4 +106,12 @@ blockquote p {
     align-self: flex-end;
   }
 }
+
+.wpcc-compliance {
+  min-height: unset;
+}
+
+.wpcc-container {
+  box-shadow: 0 0 15px ${Color.DARK_PINK_SHADOW};
+}
 `;

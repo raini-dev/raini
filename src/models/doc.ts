@@ -7,6 +7,7 @@ export interface IDoc {
   slug: string;
   body: string;
   excerpt: string;
+  description: string;
 }
 
 export const DocModel = {
@@ -15,6 +16,7 @@ export const DocModel = {
       .pipeExtend(maybeStringToString<IDoc>("slug"))
       .pipeExtend(maybeStringToString<IDoc>("body"))
       .pipeExtend(maybeStringToString<IDoc>("excerpt"))
+      .pipeExtend(maybeStringToString<IDoc>("description", doc.excerpt))
       .process(() => flattenFrontMatter<IDoc>(doc)),
   batch: (docs: Partial<Mdx>[] = []): IDoc[] => docs.map(DocModel.of),
 };
