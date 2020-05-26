@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { StaticImagesQuery } from "../../graphql-types";
-import { IFluidObject } from "../models/static-image";
+import { FluidImagesQuery } from "../../graphql-types";
+import { IFluidObject } from "gatsby-background-image";
 
 interface IFluidImages {
   missionImage: IFluidObject;
@@ -11,7 +11,7 @@ interface IFluidImages {
 }
 
 export const useFluidImages = (): IFluidImages => {
-  const images: StaticImagesQuery = useStaticQuery(graphql`
+  const images: FluidImagesQuery = useStaticQuery(graphql`
     query FluidImages {
       missionImage: file(relativePath: { eq: "mobile-mission-image.png" }) {
         sharp: childImageSharp {

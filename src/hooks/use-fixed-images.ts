@@ -1,5 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { StaticImagesQuery } from "../../graphql-types";
+import { FixedImagesQuery } from "../../graphql-types";
 import { IFixedObject } from "gatsby-background-image";
 
 interface IFixedImages {
@@ -7,7 +7,7 @@ interface IFixedImages {
 }
 
 export const useFixedImages = (): IFixedImages => {
-  const images: StaticImagesQuery = useStaticQuery(graphql`
+  const images: FixedImagesQuery = useStaticQuery(graphql`
     query FixedImages {
       ogImage1200x1200: file(relativePath: { eq: "og-source.png" }) {
         sharp: childImageSharp {
