@@ -60,6 +60,10 @@ const Seo: FC<ISeoProps> = ({
       content: "website",
     },
     {
+      property: "og:url",
+      content: metaUrl,
+    },
+    {
       name: "twitter:creator",
       content: metaAuthor,
     },
