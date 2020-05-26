@@ -2,6 +2,11 @@ export enum Route {
   HOME = "/",
   DOCS = "/docs",
   EVENTS = "/events",
+  PRIVACY_POLICY = "/privacy-policy",
+  AUP = "/acceptable-use-policy",
+  COOKIE_POLICY = "/cookie-policy",
+  DISCLAIMER = "/disclaimer",
+  TAC = "/terms-and-conditions",
 }
 
 export const eventUrl = (slug: string) => `/events/${slug}`;
