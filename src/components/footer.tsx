@@ -61,8 +61,6 @@ const Sitemap = styled.ul`
   }
 `;
 
-const SocialIcon = styled.img``;
-
 const SocialIconsContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -78,10 +76,6 @@ const FormWrapper = styled.div`
   flex-direction: column;
 `;
 
-const FooterContactForm = styled(ContactForm)`
-  color: red;
-`;
-
 const Footer: FC = () => {
   const { whiteLogo } = useFluidImages();
 
@@ -94,13 +88,13 @@ const Footer: FC = () => {
 
         <SocialIconsContainer>
           <OutboundLink href={ExternalRoute.TWITTER} target="_blank" rel="noopener noreferrer">
-            <SocialIcon src="/icon_twitter.svg" alt="Twitter logo" width="45" height="45" />
+            <img src="/icon_twitter.svg" alt="Twitter logo" width="45" height="45" />
           </OutboundLink>
           <OutboundLink href={ExternalRoute.GITHUB} target="_blank" rel="noopener noreferrer">
-            <SocialIcon src="/icon_github.svg" alt="GitHub logo" width="45" height="45" />
+            <img src="/icon_github.svg" alt="GitHub logo" width="45" height="45" />
           </OutboundLink>
           <OutboundLink href={ExternalRoute.YOUTUBE} target="_blank" rel="noopener noreferrer">
-            <SocialIcon src="/icon_youtube.svg" alt="YouTube logo" width="45" height="45" />
+            <img src="/icon_youtube.svg" alt="YouTube logo" width="45" height="45" />
           </OutboundLink>
         </SocialIconsContainer>
       </Row>
@@ -160,7 +154,7 @@ const Footer: FC = () => {
         </div>
         <FormWrapper>
           <h3>Contact Us</h3>
-          <FooterContactForm />
+          <ContactForm />
         </FormWrapper>
       </Row>
       <p>&copy; 2020 Raini.dev</p>
