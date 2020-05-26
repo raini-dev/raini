@@ -9,7 +9,7 @@ import { Container, PageContainer } from "../components/containers";
 import { Layout } from "../components/layout";
 import { BgSection, Section } from "../components/sections";
 import { Route } from "../routes";
-import Head from "../components/head";
+import Seo from "../components/seo";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 import { useFluidImages } from "../hooks/use-fluid-images";
 
@@ -97,7 +97,7 @@ const LandingPage = () => {
 
   return (
     <>
-      <Head />
+      <Seo />
 
       <BgImage Tag="section" fluid={heroBg} fadeIn="soft">
         <HeroImage

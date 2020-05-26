@@ -17,7 +17,7 @@ interface ISeoProps {
   links?: LinkProps[];
 }
 
-const Head: FC<ISeoProps> = ({
+const Seo: FC<ISeoProps> = ({
   url,
   image,
   author,
@@ -155,4 +155,4 @@ const Head: FC<ISeoProps> = ({
   );
 };
 
-export default Head;
+export default Seo;

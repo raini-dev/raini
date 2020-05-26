@@ -7,7 +7,7 @@ import { Label, LabelsList } from "../components/label";
 import { Layout } from "../components/layout";
 import { useEvents } from "../hooks/use-events";
 import { eventUrl, withHost, youTubeThumbnailUrl } from "../routes";
-import Head from "../components/head";
+import Seo from "../components/seo";
 import { Color } from "../constants";
 
 const EventsPage = () => {
@@ -15,7 +15,7 @@ const EventsPage = () => {
 
   return (
     <>
-      <Head
+      <Seo
         title="Raini.dev | Events"
         description="All Raini.dev events happening worldwide and online, gathered in one place."
         url={withHost("/events")}

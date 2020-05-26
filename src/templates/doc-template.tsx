@@ -6,7 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { PageContainer } from "../components/containers";
 import { DocModel } from "../models/doc";
 import { Mdx } from "../../graphql-types";
-import Head from "../components/head";
+import Seo from "../components/seo";
 import { Id } from "../utils";
 
 export const query = graphql`
@@ -34,7 +34,7 @@ const DocTemplate: FC<IDocTemplateProps> = ({ data }) => {
 
   return (
     <>
-      <Head title={doc.title} description={doc.excerpt} url={url} />
+      <Seo title={doc.title} description={doc.excerpt} url={url} />
       <Layout>
         <PageContainer textAlign={"left"}>
           <h1>{doc.title}</h1>

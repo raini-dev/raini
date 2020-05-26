@@ -10,7 +10,7 @@ import { Color } from "../constants";
 import { eventUrl, Route, withHost, youTubeEmbedUrl, youTubeThumbnailUrl } from "../routes";
 import { EventModel } from "../models/event";
 import { Mdx } from "../../graphql-types";
-import Head from "../components/head";
+import Seo from "../components/seo";
 import { Id } from "../utils";
 
 export const query = graphql`
@@ -74,7 +74,7 @@ const EventTemplate: FC<IEventTemplateProps> = ({ data }) => {
 
   return (
     <>
-      <Head
+      <Seo
         title={event.title}
         description={event.excerpt}
         url={url}

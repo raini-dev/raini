@@ -3,7 +3,7 @@ import { PageContainer } from "../components/containers";
 import React, { FC } from "react";
 import { graphql } from "gatsby";
 import { Mdx } from "../../graphql-types";
-import Head from "../components/head";
+import Seo from "../components/seo";
 import { DocModel } from "../models/doc";
 import { Id } from "../utils";
 import { withHost } from "../routes";
@@ -35,7 +35,7 @@ const OtherMdxTemplate: FC<IDocTemplateProps> = ({ data }) => {
 
   return (
     <>
-      <Head title={page.title} description={page.description} url={url} />
+      <Seo title={page.title} description={page.description} url={url} />
       <Layout>
         <PageContainer textAlign={"left"}>
           <h1>{page.title}</h1>

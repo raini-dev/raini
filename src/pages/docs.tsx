@@ -7,7 +7,7 @@ import { docUrl, withHost } from "../routes";
 import { Link } from "gatsby";
 import { Button } from "../components/buttons";
 import { UnderConstructionEmoji } from "../components/emoji";
-import Head from "../components/head";
+import Seo from "../components/seo";
 
 const DocsPage = () => {
   const docs = useDocs();
@@ -22,9 +22,9 @@ const DocsPage = () => {
 
   return (
     <>
-      <Head
+      <Seo
         title="Raini.dev | Docs"
-        description="Find out how to participate in developing education with Raini.dev"
+        description="Find out how to participate in developing education with Raini.dev."
         url={withHost("/docs")}
       />
       <Layout>
