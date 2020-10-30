@@ -53,23 +53,23 @@ const Form = styled.form`
 export const ContactForm = () => (
   <Form name="contact" method="post" netlify-honeypot="bot-field" data-netlify="true">
     <input type="hidden" name="bot-field" />
-    <label htmlFor="name">Name</label>
+    <label htmlFor="name">Имя</label>
     <input type="text" name="name" id="name" />
 
     <label htmlFor="email">Email</label>
     <input type="email" name="email" id="email" />
 
-    <label htmlFor="subject">Subject</label>
+    <label htmlFor="subject">Тема</label>
     <input type="text" name="subject" id="subject" />
 
-    <label htmlFor="message">Message</label>
+    <label htmlFor="message">Сообщение</label>
     <textarea name="message" id="message" rows={5} />
 
     <Container padding="1rem 0" justifyContent="space-between" width="100%">
       <button className="form-button" type="submit">
-        Send
+        Отправить
       </button>
-      <input className="form-button" type="reset" value="Clear" />
+      <input className="form-button" type="reset" value="Сбросить" />
     </Container>
   </Form>
 );

@@ -1,6 +1,6 @@
 const {
   NODE_ENV,
-  URL: NETLIFY_SITE_URL = "https://raini.dev",
+  URL: NETLIFY_SITE_URL = "https://raini.dev/",
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV,
 } = process.env;
@@ -10,10 +10,11 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 module.exports = {
   siteMetadata: {
     siteUrl,
-    title: "Raini.dev | Meet Raini.dev",
-    description:
-      "Raini.dev is an open sourced online learning and teaching space. Learn programming, marketing, data science and more. Empowered by professionals from all over the world.",
+		title: 'Raini.dev | Сообщество не об IT, а о людях',
+		description:
+			'Raini.dev - это инклюзивное IT Discord-сообщество, направленное в первую очередь на людей, а не на технологии.',
     author: "Raini.dev",
+    
   },
   plugins: [
     "gatsby-plugin-emotion",

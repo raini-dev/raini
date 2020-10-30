@@ -8,7 +8,7 @@ import { Card, CardList } from "../components/card";
 import { Container, PageContainer } from "../components/containers";
 import { Layout } from "../components/layout";
 import { BgSection, Section } from "../components/sections";
-import { Route } from "../routes";
+import { ExternalRoute, Route } from "../routes";
 import Seo from "../components/seo";
 import { useSiteMetadata } from "../hooks/use-site-metadata";
 import { useFluidImages } from "../hooks/use-fluid-images";
@@ -124,42 +124,43 @@ const LandingPage = () => {
         <HeroCTA>
           <h1>Raini.dev</h1>
           <p>{description}</p>
-          <Link to={Route.DOCS}>
-            <Button type="button">See More</Button>
+          <Link to={ExternalRoute.DISCORD}>
+            <Button type="button">DISCORD</Button>
           </Link>
         </HeroCTA>
       </BgImage>
       <Layout>
         <BgSection Tag="section" fluid={featuresBgImage}>
           <PageContainer alignItems="center" padding="0">
-            <h2>How we do it</h2>
+            <h2>Фичи</h2>
             <CardList>
               <Card>
                 <p>
-                  We treat education as an <strong>Open Source</strong> project. Together, we are
-                  able to improve the quality of the education content based on real knowledge and
-                  vivid experience of developers from all over the world.
+                  Raini.dev - это в каком-то смысле <strong>сообщество сообществ</strong>. Здесь
+                  можно узнать информацию об активностях наших комьюнити-друзей, найти
+                  единомышленников и поучаствовать в разной движухе. А еще можно создать свою - мы
+                  только за!
                 </p>
               </Card>
               <Card>
                 <p>
-                  <strong>Contribution</strong> is easy. We&apos;ve prepared several guides on how
-                  to bring the material to its best shape. Don&apos;t have time for that? Just land
-                  what you have and someone will <strong>contribute</strong> to it to make it fit.
+                  Мы ценим хороший контент в любом виде -{" "}
+                  <strong>блоги, стримы, видео и прочее</strong>. Но с ходу подкаст года не создать.
+                  У более опытных участников Raini.dev можно узнать, какой майк лучше и сколько
+                  тегов надо на YouTube. А на ваши работы можно получить полезную обратную связь.
                 </p>
               </Card>
               <Card>
                 <p>
-                  There is <strong>no attribution</strong> from our side. You are the owner of the
-                  material and all the insignia are yours. The only thing we ask for is the proper
-                  license that allows other people to extend or improve your content.
+                  В нашем сообществе можно найти людей со схожими интересами, не ограничиваясь
+                  JS'ами и Python'ами. У нас есть разделы и про кулинарию, и про DIY. В общем,{" "}
+                  <strong>нет оффтопа - есть темы, для которых пока не выделили канал</strong>.
                 </p>
               </Card>
               <Card>
                 <p>
-                  The approach we have taken allows us to provide the same quality of the content in
-                  as many languages as needed to let every person on the planet learn comfortably.
-                  Together, we make it <strong>accessible</strong>.
+                  Мы хотим, чтобы каждый загорелся идеей сделать что-то своё, поэтому мы активно{" "}
+                  <strong>поддерживаем начинающих</strong> участников словом и делом.
                 </p>
               </Card>
             </CardList>
@@ -173,13 +174,14 @@ const LandingPage = () => {
               fadeIn
             />
             <MissionTextWrapper>
-              <h2>The Mission</h2>
+              <h2>Миссия</h2>
               <Mission>
-                Our mission is to evolve the tech industry through education powered by
-                professionals and accessible to everyone.
+                Наша миссия - объединить всех русскоговорящих людей из IT в позитивном и
+                продуктивном сообществе, и создать все условия, чтобы весь мир пошёл учить русский
+                язык ради получения лучшего контента на планете. 😇
               </Mission>
-              <Link to={Route.DOCS}>
-                <Button type="button">See More</Button>
+              <Link to={ExternalRoute.DISCORD}>
+                <Button type="button">Го в Discord</Button>
               </Link>
             </MissionTextWrapper>
           </MissionContainer>

@@ -23,7 +23,7 @@ const Seo: FC<ISeoProps> = ({
   author,
   title,
   description,
-  lang = "en",
+  lang = "ru",
   meta = [],
   scripts = [],
   links = [],
@@ -90,7 +90,7 @@ const Seo: FC<ISeoProps> = ({
     {
       rel: "stylesheet",
       type: "text/css",
-      href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap",
+      href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap",
     },
     {
       href: withHost("/hamburger.min.css"),

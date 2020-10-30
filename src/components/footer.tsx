@@ -113,8 +113,13 @@ const Footer: FC = () => {
             </li>
           </Sitemap>
 
-          <h3>Social Media</h3>
+          <h3>Соц. сети</h3>
           <Sitemap>
+            <li>
+              <OutboundLink target="_blank" rel="noopener noreferrer" href={ExternalRoute.DISCORD}>
+                &#8599; Discord
+              </OutboundLink>
+            </li>
             <li>
               <OutboundLink target="_blank" rel="noopener noreferrer" href={ExternalRoute.TWITTER}>
                 &#8599; Twitter
@@ -133,7 +138,7 @@ const Footer: FC = () => {
           </Sitemap>
         </div>
         <div>
-          <h3>Legal</h3>
+          <h3>Легальности</h3>
           <Sitemap>
             <li>
               <Link to={Route.AUP}>Acceptable Use Policy</Link>
@@ -153,7 +158,7 @@ const Footer: FC = () => {
           </Sitemap>
         </div>
         <FormWrapper>
-          <h3>Contact Us</h3>
+          <h3>Напишите нам!</h3>
           <ContactForm />
         </FormWrapper>
       </Row>

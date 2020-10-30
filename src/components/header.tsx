@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Link } from "gatsby";
 import React, { Dispatch, FC, SetStateAction, useState } from "react";
 import { Color } from "../constants";
-import { Route } from "../routes";
+import { ExternalRoute, Route } from "../routes";
 
 const Nav = styled.nav`
   position: absolute;
@@ -76,14 +76,14 @@ const Navigation: FC<INavigationProps> = ({ isActive }) => (
   <Nav className={isActive ? "is-active" : ""}>
     <NavUl>
       <NavLi>
-        <NavLink to={Route.EVENTS} activeClassName="current-page">
-          Events
+        <NavLink to={ExternalRoute.DISCORD} activeClassName="current-page">
+          Discord
         </NavLink>
       </NavLi>
 
       <NavLi>
-        <NavLink to={Route.DOCS} activeClassName="current-page">
-          Docs
+        <NavLink to={ExternalRoute.GITHUB} activeClassName="current-page">
+          GitHub
         </NavLink>
       </NavLi>
     </NavUl>
