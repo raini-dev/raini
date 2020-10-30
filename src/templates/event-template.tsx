@@ -9,7 +9,6 @@ import { Layout } from "../components/layout";
 import { Color } from "../constants";
 import { eventUrl, Route, withHost, youTubeEmbedUrl, youTubeThumbnailUrl } from "../routes";
 import { EventModel } from "../models/event";
-import { Mdx } from "../../graphql-types";
 import Seo from "../components/seo";
 import { Id } from "../utils";
 
@@ -64,7 +63,7 @@ const SmallNote = styled.p`
 
 interface IEventTemplateProps {
   data: {
-    event: Partial<Mdx>;
+    event: any;
   };
 }
 

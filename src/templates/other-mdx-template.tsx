@@ -2,7 +2,6 @@ import { Layout } from "../components/layout";
 import { PageContainer } from "../components/containers";
 import React, { FC } from "react";
 import { graphql } from "gatsby";
-import { Mdx } from "../../graphql-types";
 import Seo from "../components/seo";
 import { DocModel } from "../models/doc";
 import { Id } from "../utils";
@@ -25,7 +24,7 @@ export const query = graphql`
 
 interface IDocTemplateProps {
   data: {
-    page: Partial<Mdx>;
+    page: any;
   };
 }
 

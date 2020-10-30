@@ -19,7 +19,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-emotion",
     "gatsby-plugin-typescript",
-    "gatsby-plugin-graphql-codegen",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

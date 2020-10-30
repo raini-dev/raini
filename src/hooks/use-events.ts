@@ -1,9 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { Mdx } from "../../graphql-types";
 import { EventModel } from "../models/event";
 
 export const useEvents = () => {
-  const query: { allMdx: { events: Partial<Mdx>[] } } = useStaticQuery(graphql`
+  const query: { allMdx: { events: any[] } } = useStaticQuery(graphql`
     query AllEvents {
       allMdx(
         filter: { fileAbsolutePath: { regex: "/content/events/" } }

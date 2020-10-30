@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Link } from "gatsby";
 import React, { Dispatch, FC, SetStateAction, useState } from "react";
 import { Color } from "../constants";
-import { ExternalRoute, Route } from "../routes";
+import { ExternalRoute } from "../routes";
 
 const Nav = styled.nav`
   position: absolute;

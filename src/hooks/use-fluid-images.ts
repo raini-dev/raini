@@ -1,5 +1,4 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { FluidImagesQuery } from "../../graphql-types";
 
 interface IFluidObject {
   aspectRatio: number;
@@ -22,7 +21,7 @@ interface IFluidImages {
 }
 
 export const useFluidImages = (): IFluidImages => {
-  const images: FluidImagesQuery = useStaticQuery(graphql`
+  const images: any = useStaticQuery(graphql`
     query FluidImages {
       missionImage: file(relativePath: { eq: "mobile-mission-image.png" }) {
         sharp: childImageSharp {

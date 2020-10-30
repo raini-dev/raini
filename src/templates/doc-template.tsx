@@ -5,7 +5,6 @@ import { docUrl, Route, withHost } from "../routes";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { PageContainer } from "../components/containers";
 import { DocModel } from "../models/doc";
-import { Mdx } from "../../graphql-types";
 import Seo from "../components/seo";
 import { Id } from "../utils";
 
@@ -24,7 +23,7 @@ export const query = graphql`
 
 interface IDocTemplateProps {
   data: {
-    doc: Partial<Mdx>;
+    doc: any;
   };
 }
 
